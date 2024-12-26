@@ -9,13 +9,13 @@ const Navbar = () => {
       {/* Top Bar */}
       <div className="bg-custom-gradient w-full py-2 px-4 flex justify-center md:justify-end">
         <div className="flex gap-4">
-          <a href="#" className="text-white hover:text-pink-600">
+          <a href="https://www.facebook.com/TravelAgencyBeli/" className="text-white hover:text-pink-600">
             <FaFacebook className="text-xl" />
           </a>
-          <a href="#" className="text-white hover:text-pink-600">
+          <a href="https://www.instagram.com/belitravel/" className="text-white hover:text-pink-600">
             <FaInstagram className="text-xl" />
           </a>
-          <a href="#" className="text-white hover:text-pink-600">
+          <a href="`tel:+38344113710`" className="text-white hover:text-pink-600">
             <FaPhone className="text-xl" />
           </a>
         </div>
@@ -29,7 +29,7 @@ const Navbar = () => {
 
           {/* Hamburger Menu */}
           <button
-            className="text-gray-600 hover:text-purple-700 md:hidden"
+            className="text-gray-200 hover:text-secondary-purple md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             ☰

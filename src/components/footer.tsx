@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, Smartphone, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Mail, FaPhone, MapPin, Smartphone, Instagram, Twitter, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const recentPosts = [
@@ -91,25 +91,25 @@ const Footer: React.FC = () => {
         {/* Social Links */}
         <div className="mt-8 flex justify-center gap-6 text-xl text-gray-400">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/TravelAgencyBeli"
             className="hover:text-[#A80C51] transition-colors"
             aria-label="Facebook"
           >
             <Facebook />
           </a>
           <a
-            href="https://twitter.com"
-            className="hover:text-[#A80C51] transition-colors"
-            aria-label="Twitter"
-          >
-            <Twitter />
-          </a>
-          <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/belitravel/"
             className="hover:text-[#A80C51] transition-colors"
             aria-label="Instagram"
           >
             <Instagram />
+          </a>
+          <a
+            href="`tel:+38344113710`"
+            className="hover:text-[#A80C51] transition-colors"
+            aria-label="Phone"
+          >
+            <FaPhone />
           </a>
         </div>
 
