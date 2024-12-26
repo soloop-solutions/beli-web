@@ -17,10 +17,12 @@ const Footer: React.FC = () => {
           {/* Logo and Description */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">Beli Travel</h2>
-              <p className="text-gray-200 text-sm leading-relaxed">
-                A Powerful & Beautiful Multi-Purpose WordPress theme with tons of advanced features.
-              </p>
+            <img
+                    src={`/logo-white.png?height=40&width=80`}
+                    alt={`Logo Beli Travel`}
+                    className="rounded w-full h-full object-cover"
+                  />
+
             </div>
 
             {/* Google Map Section */}

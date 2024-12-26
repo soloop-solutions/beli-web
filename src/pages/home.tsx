@@ -1,5 +1,5 @@
 import React from "react";
-{/*import BlogPostSlider from '@/components/blog-post-slider'*/}
+import BlogPostSlider from '@/components/blog-post-slider'
 import PlaneSection from "@/components/plane";
 {/*import { TravelSlider } from "@/components/travel-slider";*/}
 import TravelSection from "@/components/TravelSection";
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     {/*  <TravelSlider /> */}
       <PlaneSection /> 
       <BlogSection /> 
-   {/*     <BlogPostSlider /> */}
+      <BlogPostSlider />
     </div>
   );
 };
