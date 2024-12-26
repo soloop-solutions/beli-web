@@ -15,7 +15,7 @@ const Navbar = () => {
           <a href="https://www.instagram.com/belitravel/" className="text-white hover:text-pink-600">
             <FaInstagram className="text-xl" />
           </a>
-          <a href="`tel:+38344113710`" className="text-white hover:text-pink-600">
+          <a href="tel:+38344113710" className="text-white hover:text-pink-600">
             <FaPhone className="text-xl" />
           </a>
         </div>

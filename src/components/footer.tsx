@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, FaPhone, MapPin, Smartphone, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Smartphone, Instagram, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const recentPosts = [
@@ -105,11 +105,11 @@ const Footer: React.FC = () => {
             <Instagram />
           </a>
           <a
-            href="`tel:+38344113710`"
+            href="tel:+38344113710"
             className="hover:text-[#A80C51] transition-colors"
             aria-label="Phone"
           >
-            <FaPhone />
+            <Phone />
           </a>
         </div>
 
