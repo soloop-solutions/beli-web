@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BlogList } from '../components/BlogList';
 import { BlogPost } from '@/types/BlogPost';
 import { fetchBlogPosts } from '@/services/blogService';

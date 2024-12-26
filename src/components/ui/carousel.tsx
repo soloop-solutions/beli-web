@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
@@ -33,7 +33,7 @@ export const Carousel = () => {
 
       // State to keep track of the current card index and cards data
   const [tours, setTours] = useState<Tour[]>([]); // Explicitly type the cards state
-  const [currentIndex, setCurrentIndex] = useState(0);
+
 
     useEffect(() => {
         fetch("/data/db.json")

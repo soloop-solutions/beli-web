@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState } from 'react';
 import { FaFacebook, FaInstagram, FaPhone } from 'react-icons/fa';
 
