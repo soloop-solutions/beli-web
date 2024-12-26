@@ -1,0 +1,147 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Discount for all airlines",
+      "description": "Save on your next trip with exclusive deals.",
+      "image": "/hero.png"
+    },
+    {
+      "id": 2,
+      "title": "Travel around the world",
+      "description": "Explore the globe with unforgettable experiences.",
+      "image": "/hero.png"
+    },
+    {
+      "id": 3,
+      "title": "Luxury resorts top deals",
+      "description": "Find the best offers for luxury accommodations.",
+      "image": "/hero.png"
+    }
+  ],
+  "tours": [
+    {
+      "id": 1,
+      "title": "Asia",
+      "location": "The biggest part of the world",
+      "price": 356,
+      "reviews": 10,
+      "image": "/hero.png"
+    },
+    {
+      "id": 2,
+      "title": "A trip to the mighty desert",
+      "location": "North Africa",
+      "price": 356,
+      "reviews": 10,
+      "image": "/hero.png"
+    },
+    {
+      "id": 3,
+      "title": "An unforgettable experience",
+      "location": "South America",
+      "price": 499,
+      "reviews": 8,
+      "image": "/hero.png"
+    },
+    {
+      "id": 4,
+      "title": "A tropical paradise",
+      "location": "Southeast Asia",
+      "price": 399,
+      "reviews": 12,
+      "image": "/hero2.png"
+    }
+  ],
+  "posts":[
+   {
+      "id":1,
+      "title":"The Future of Artificial Intelligence",
+      "content":"Artificial Intelligence (AI) is rapidly evolving, transforming industries and our daily lives. From self-driving cars to advanced medical diagnostics, AI is pushing the boundaries of what's possible.\n\nOne of the most exciting areas of AI development is machine learning, which allows systems to improve their performance without being explicitly programmed. This has led to breakthroughs in natural language processing, computer vision, and predictive analytics.\n\nHowever, as AI becomes more powerful, it also raises important ethical questions. How do we ensure AI systems are unbiased and fair? What about privacy concerns and job displacement?\n\nAs we move forward, it's crucial that we develop AI responsibly, considering both its potential benefits and risks. The future of AI is bright, but it requires careful navigation and collaboration between technologists, policymakers, and ethicists.",
+      "author":"Dr. Emily Chen",
+      "date":"2023-05-15",
+      "image":"/hero2.png??height=400&width=800"
+   },
+   {
+      "id":2,
+      "title":"Sustainable Living: Small Changes, Big Impact",
+      "content":"In the face of climate change and environmental degradation, sustainable living has become more important than ever. The good news is that even small changes in our daily lives can have a significant positive impact on the planet.\n\nOne easy step is to reduce single-use plastics. Carry a reusable water bottle, bring your own shopping bags, and say no to plastic straws. These simple actions can dramatically reduce your plastic waste.\n\nAnother impactful change is to eat more plant-based meals. Even if you're not ready to go fully vegetarian or vegan, incorporating more fruits, vegetables, and plant-based proteins into your diet can significantly reduce your carbon footprint.\n\nEnergy conservation is also key. Turn off lights when you leave a room, unplug electronics when not in use, and consider switching to energy-efficient appliances. These actions not only help the environment but can also save you money on energy bills.\n\nRemember, sustainable living isn't about perfection—it's about making conscious choices and continuous improvement. Every small step counts towards a healthier planet for all.",
+      "author":"Sarah Green",
+      "date":"2023-05-10",
+      "image":"/hero2.png??height=400&width=800"
+   },
+   {
+      "id":3,
+      "title":"The Rise of Remote Work: Challenges and Opportunities",
+      "content":"The COVID-19 pandemic has accelerated a trend that was already in motion: the rise of remote work. As companies and employees have adapted to working from home, it's become clear that this shift is here to stay, bringing both challenges and opportunities.\n\nOne of the main benefits of remote work is increased flexibility. Employees can often set their own schedules and work from anywhere with an internet connection. This can lead to better work-life balance and increased job satisfaction.\n\nHowever, remote work also presents challenges. Communication can be more difficult when teams are not physically together. There's also the risk of isolation and burnout as the lines between work and personal life blur.\n\nFor companies, remote work offers the opportunity to tap into a global talent pool and potentially reduce overhead costs. But it also requires new management strategies and investment in digital infrastructure.\n\nAs we move forward, it's likely that many companies will adopt hybrid models, combining remote work with in-office time. The key to success will be finding the right balance and continuously adapting to meet the needs of both employees and the business.",
+      "author":"Alex Johnson",
+      "date":"2023-05-05",
+      "image":"/hero2.png??height=400&width=800"
+   },
+   {
+      "id":4,
+      "title":"The Importance of Financial Literacy",
+      "content":"In today's complex financial world, being financially literate is more important than ever. Financial literacy refers to the ability to understand and effectively use various financial skills, including personal financial management, budgeting, and investing.\n\nOne of the key aspects of financial literacy is understanding how to budget effectively. This involves tracking your income and expenses, setting financial goals, and making informed decisions about spending and saving.\n\nInvesting is another crucial area of financial literacy. Understanding different investment options, risk management, and the power of compound interest can help you grow your wealth over time and prepare for the future.\n\nCredit management is also an important part of financial literacy. Knowing how credit scores work, how to use credit responsibly, and how to avoid debt traps can have a significant impact on your financial health.\n\nUnfortunately, financial literacy is not typically taught in schools, leaving many people to learn these crucial skills on their own. That's why it's important to seek out resources and education to improve your financial knowledge.\n\nRemember, becoming financially literate is a journey, not a destination. Start small, keep learning, and over time, you'll develop the skills and knowledge to make sound financial decisions and achieve your financial goals.",
+      "author":"Maria Rodriguez",
+      "date":"2023-04-30",
+      "image":"/hero2.png?height=400&width=800"
+   },
+   {
+      "id":5,
+      "title":"The Power of Mindfulness in Daily Life",
+      "content":"In our fast-paced, always-connected world, the practice of mindfulness has gained increasing attention as a way to reduce stress, improve focus, and enhance overall well-being.\n\nMindfulness is the practice of being fully present and engaged in the current moment, aware of our thoughts and feelings without distraction or judgment. It's a simple concept, but it can have profound effects on our mental and physical health.\n\nOne of the primary benefits of mindfulness is stress reduction. By focusing on the present moment, we can break the cycle of worrying about the future or ruminating on the past. This can lead to lower levels of anxiety and depression.\n\nMindfulness can also improve our ability to focus and concentrate. In a world full of distractions, the ability to maintain attention on a single task is increasingly valuable. Regular mindfulness practice can help strengthen this skill.\n\nPhysically, mindfulness has been shown to have numerous benefits, including lower blood pressure, improved sleep, and a stronger immune system.\n\nIncorporating mindfulness into daily life doesn't have to be complicated. Simple practices like mindful breathing, body scans, or even mindful eating can be powerful tools. The key is consistency – even a few minutes of mindfulness practice each day can make a significant difference over time.\n\nAs with any skill, mindfulness takes practice. But with patience and persistence, it can become a powerful tool for navigating the challenges of modern life and finding greater peace and satisfaction in our daily experiences.",
+      "author":"David Lee",
+      "date":"2023-04-25",
+      "image":"/hero2.png"
+   }
+], 
+"packages": [
+  {
+    "id": 1,
+    "title": "Udhëtim në Barcelonë",
+    "days": 4,
+    "country": "Spanjë",
+    "price": 422,
+    "image": "/hero2.png",
+    "description": "Vizitoni Sagrada Familia dhe monumentet e tjera"
+  },
+  {
+    "id": 2,
+    "title": "Udhëtim në Madrid dhe Barcelonë",
+    "days": 5,
+    "country": "Spanje",
+    "price": 361,
+    "image": "/hero2.png",
+    "description": "Eksploroni dy qytetet më të mëdha të Spanjës"
+  },
+  {
+    "id": 3,
+    "title": "Udhëtim në Porto, Lisbonë, Madrid",
+    "days": 5,
+    "country": "Spanje dhe Portugali",
+    "price": 463,
+    "image": "/hero2.png",
+    "description": "Një udhëtim i paharrueshëm në Gadishullin Iberik"
+  },
+  {
+    "id": 4,
+    "title": "Udhëtim në Porto, Lisbonë, Madrid",
+    "days": 5,
+    "country": "Spanje dhe Portugali",
+    "price": 463,
+    "image": "/hero2.png",
+    "description": "Një udhëtim i paharrueshëm në Gadishullin Iberik"
+  },
+  {
+    "id": 6,
+    "title": "Udhëtim në Porto, Lisbonë, Madrid",
+    "days": 5,
+    "country": "Spanje dhe Portugali",
+    "price": 463,
+    "image": "/hero2.png",
+    "description": "Një udhëtim i paharrueshëm në Gadishullin Iberik"
+  }
+]
+
+
+}

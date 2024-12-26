@@ -1,0 +1,20 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "paths": {
+        "@assets/*": ["assets/*"],
+        "@components/*": ["./components/*"],
+        "@ui/*": ["./ui/*"],
+        "@/*": ["src/*"]
+    }
+  }
+
+}
