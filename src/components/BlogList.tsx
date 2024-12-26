@@ -1,4 +1,5 @@
 import { BlogPost } from '../types/BlogPost';
+import { Link } from 'react-router-dom';
 
 interface BlogListProps {
   posts: BlogPost[];
@@ -32,6 +33,7 @@ export function BlogList({ posts }: BlogListProps) {
             <p className="  text-sm sm:text-base text-gray-400 mb-4 line-clamp-2">
               {post.content}
             </p>
+            <Link to={`/BlogPost/${post.id}`}>more info</Link>
             <a
               href={`/blog/${post.id}`}
               className="flex justify-end text-secondary-purple hover:text-primary-blue text-sm sm:text-base"

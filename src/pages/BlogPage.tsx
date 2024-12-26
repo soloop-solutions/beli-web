@@ -5,6 +5,7 @@ import { BlogPost } from '@/types/BlogPost';
 import { fetchBlogPosts } from '@/services/blogService';
 
 
+
 export function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
