@@ -18,6 +18,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%; /* Ensure it takes full width */
+  max-width: none; /* Remove any max-width restrictions */
+  
+}
+
+.container {
+  width: 100%; /* Ensure it takes full width */
+  max-width: none; /* Remove any max-width restrictions */
 }
 
 a {
@@ -36,7 +44,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  max-width: fit-content;
+  min-width: fit-content;
+  width: 100%; /* Ensure it takes full width */
+  max-width: none; /* Remove any max-width restrictions */
+
 }
 
 h1 {
@@ -139,4 +150,6 @@ button:focus-visible {
   body {
     @apply bg-background text-foreground;
   }
+
+
 }

@@ -29,7 +29,7 @@ const Navbar = () => {
 
           {/* Hamburger Menu */}
           <button
-            className="text-gray-200 hover:text-secondary-purple md:hidden"
+            className="text-gray-200 bg-white  hover:text-secondary-purple md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             ☰

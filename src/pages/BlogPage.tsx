@@ -31,7 +31,7 @@ export function BlogPage() {
   }
 
   return (
-    <div className="container w-[100%] mx-auto px-4 py-8 mt-24">     
+    <div className="container w-full mx-auto px-4 py-8 mt-24">     
 
       <section>
         <BlogList posts={posts} />

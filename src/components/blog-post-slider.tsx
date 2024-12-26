@@ -52,7 +52,7 @@ const BlogPostSlider: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen"> {/* Center the div */}
-    <div className="relative w-[85%] overflow-hidden px-4 mb-32"> {/* Added padding */}
+    <div className="relative w-full overflow-hidden px-4 mb-32"> {/* Added padding */}
       <div className="flex justify-between mb-4">
         <a href="/blog" className="text-gray-600 hover:text-gray-900 text-sm">
           Te gjithe artikujt
