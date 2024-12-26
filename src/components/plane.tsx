@@ -48,7 +48,7 @@ const PlaneSection: React.FC = () => {
         {/* Decorative Elements - Hidden on mobile, visible on larger screens */}
         <div className="hidden md:block mt-4">
           <div className="flex justify-between items-center">
-            {["Basel", "Zurich", "Geneva", "Lausanne", "Prishtina"].map((city, index) => (
+            {["Basel", "Zurich", "Geneva", "Lausanne", "Prishtina"].map((city, ) => (
               <div key={city} className="text-center">
                 <div className="bg-white p-2 rounded-lg shadow-md w-12 h-12 mx-auto mb-2">
                   <img
