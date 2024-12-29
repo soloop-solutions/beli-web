@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const TravelSection: React.FC = () => {
   return (
     <div className="flex flex-col items-center text-center py-8 px-4">

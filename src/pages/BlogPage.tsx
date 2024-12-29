@@ -5,7 +5,6 @@ import { BlogPost } from '@/types/BlogPost';
 import { fetchBlogPosts } from '@/services/blogService';
 
 
-
 export function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
@@ -32,11 +31,20 @@ export function BlogPage() {
   }
 
   return (
-    <div className="container w-full mx-auto px-4 py-8 mt-24">     
+    <div className="container w-full mx-auto px-4 my-24">     
 
-      <section>
-        <BlogList posts={posts} />
-      </section>
+<div className="flex flex-row items-center text-center px-4">
+    
+
+      {/* Title */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+       Guidat e fundit
+      </h2>
+
+    </div>
+    
+      <BlogList posts={posts} />
+      
     </div>
   );
 }

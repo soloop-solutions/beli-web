@@ -59,7 +59,7 @@ module.exports = {
 			'custom-gradient': 'linear-gradient(90deg, rgba(21,48,73,1) 0%, rgba(21,127,201,1) 25%)',
 		  },
 		  fontFamily: {
-			montserrat: ['Montserrat', 'sans-serif'],
+			montserrat: ['Nunito', 'sans-serif'],
 		  },
   	}
   },
