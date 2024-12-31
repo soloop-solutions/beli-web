@@ -1,43 +1,58 @@
 import { TravelPackage } from "../types/package";
-import { Plane } from "lucide-react";
-import { Hotel } from "lucide-react";
-import { CarTaxiFront  }  from "lucide-react";
-import { Tooltip as ReactTooltip } from "react-tooltip";
+import { Plane, Hotel, CarTaxiFront } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+
 interface PackageCardProps {
   package: TravelPackage;
 }
-    <ReactTooltip
-    id="my-tooltip-1"
-    variant="info"
-    place="bottom"
-    content="Hello world! I'm a Tooltip"
-    /> 
 
- export function PackageCard({ package: pkg }: PackageCardProps) {
+export function PackageCard({ package: pkg }: PackageCardProps) {
   return (
-    <div className="relative flex flex-col bg-white rounded-lg mb-24 overflow-hidden shadow-md min-w-[280px] md:min-w-[350px] mx-auto hover:scale-105 hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform">
-  {/* Image Section with Parallax Effect */}
-  <div className="relative w-full h-44 md:h-56 overflow-hidden transform translate-y-0 group hover:translate-y-[-10px] transition-transform duration-300 ease-in-out">
-    <img
-      src={pkg.image}
-      alt={pkg.title}
-      className="w-full h-full object-cover transition-all duration-300"
-    />
-  </div>
+    <div className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out">
+      {/* Image Section */}
+      <div className="relative aspect-video overflow-hidden gap-6">
+        <img
+          src={pkg.image}
+          alt={pkg.title}
+          className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute top-2 left-2 bg-secondary-blue px-2 py-1 rounded-xl">
+          <p  className="text-xs font-semibold text-white">
+            {pkg.days} 
+          </p>
+        </div>
+        <div className="absolute top-2 right-2 bg-secondary-purple px-2 py-1 rounded-xl">
+          <p  className="text-xs font-semibold text-white">
+            {pkg.country} 
+          </p>
+        </div>
+        <div className="absolute bottom-2 left-2 right-2">
+          <h3 className="text-lg font-semibold text-white">{pkg.title}</h3>
+        </div>
+      </div>
 
-  {/* Content Section */}
-  <div className="p-4 flex flex-col gap-3">
-    <h3 className="text-primary-blue font-bold text-base md:text-lg truncate">{pkg.title}</h3>
-    <div className="flex justify-between items-center">
-      <span className="text-secondary-blue font-bold text-sm md:text-base">{pkg.days} ditë</span>
-      <span className="text-gray-500 text-xs md:text-sm flex items-center gap-1">Ne cmim perfshihen:  <Hotel/> <Plane /> <CarTaxiFront /></span>
+      {/* Content Section */}
+      <div className="p-4">
+      <div className="flex">
+        <p className=" text-sm text-gray-600 line-clamp-3 mb-4 text-left min-h-[60px]">{pkg.description}</p>
+        </div>
+        <div className="flex flex-col justify-between items-start text-xs text-gray-500 mb-4">
+          <span className="font-medium">Perfshihet:</span>
+          <div className="flex flex-col items-start gap-2 py-2">
+           <div className="flex flex-row  gap-2">  Hoteli <Hotel className="w-4 h-4 text-secondary-blue" /></div>
+           <div className="flex flex-row  gap-2">  Bileta <Plane className="w-4 h-4  text-secondary-blue " /></div>
+           <div className="flex flex-row  gap-2">  Transporti <CarTaxiFront className="w-4 h-4  text-secondary-blue" /></div>
+          </div>
+        </div>
+        <div className="flex justify-between items-center">
+          <span className="text-lg font-bold text-primary-blue">{pkg.price} €</span>
+          <Button variant="default" size="sm" className="rounded-full bg-secondary-blue">
+           Rezervo tani
+          </Button>
+        </div>
+      </div>
     </div>
-    <div className="mt-4 flex justify-center">
-      <button className="px-6 py-2 text-white bg-[#E5502A] rounded-full">Cmimi:  {pkg.price} € p.p</button>
-    </div>
-  </div>
-</div>
-
-
   );
 }
+

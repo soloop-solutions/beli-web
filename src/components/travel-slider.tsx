@@ -1,8 +1,7 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { PackageCard } from '../components/package-card';
 
 interface TravelPackage {
@@ -15,71 +14,94 @@ interface TravelPackage {
   description: string;
 }
 
-export function TravelSlider() {
+const TravelSlider: React.FC = () => {
   const [packages, setPackages] = useState<TravelPackage[]>([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const sliderRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (sliderRef.current) {
-      const scrollAmount = direction === 'left' ? -350 : 350;
-      sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
-  // Fetch the data dynamically
   useEffect(() => {
-    fetch('/data/db.json')
-      .then((response) => {
+    const fetchPackages = async () => {
+      try {
+        const response = await fetch('/data/db.json');
         if (!response.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error('Failed to fetch travel packages');
         }
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         setPackages(data.packages);
-      })
-      .catch((error) => {
-        console.error('Error fetching packages:', error);
-      });
+        setIsLoading(false);
+      } catch {
+        setError('Error fetching travel packages. Please try again later.');
+        setIsLoading(false);
+      }
+    };
+
+    fetchPackages();
   }, []);
 
+  const packagesPerSlide = 3;
+  const totalSlides = Math.ceil(packages.length / packagesPerSlide);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  if (isLoading) {
+    return <div className="text-center py-10">Loading travel packages...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center py-10 text-red-500">{error}</div>;
+  }
+
   return (
-    <div className="w-[90%] max-w-7xl mx-auto px-4 py-8">
-      <div className="relative">
-        <div
-          ref={sliderRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {packages.map((pkg) => (
-            <div key={pkg.id} className="snap-start">
-              <PackageCard package={pkg} />
-            </div>
-          ))}
-        </div>
+    <div className="flex justify-center items-center px-5">
+      <div className="relative w-full h-full overflow-hidden px-4 mb-32">
 
-        <div className="hidden md:block mb-24 ">
-          <Button
-            variant="outline"
-            size="icon"
-            className=" ml-4  absolute left-0 top-1/4 -translate-y-1/2 -translate-x-4 bg-primary-blue text-white border-2 border-primary-blue hover:bg-blue-600 hover:border-blue-600 shadow-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-            onClick={() => scroll('left')}
+
+        <div className="relative h-full overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{
+              transform: `translateX(-${currentSlide * 100}%)`,
+              width: `${totalSlides * 50}%`,
+            }}
           >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
+            {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+              <div key={slideIndex} className="flex w-full flex-shrink-0 gap-4 py-4">
+                {packages
+                  .slice(slideIndex * packagesPerSlide, (slideIndex + 1) * packagesPerSlide)
+                  .map((pkg) => (
+                    <div key={pkg.id} className="w-1/3">
+                      <PackageCard package={pkg} />
+                    </div>
+                  ))}
+              </div>
+            ))}
+          </div>
 
-          <Button
-            variant="outline"
-            size="icon"
-            className="mr-4 absolute right-0 top-1/4 -translate-y-1/2 translate-x-4 bg-primary-blue text-white border-2 border-primary-blue hover:bg-blue-600 hover:border-blue-600 shadow-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-            onClick={() => scroll('right')}
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
+            aria-label="Previous slide"
           >
-            <ChevronRight className="h-4 w-4" />
-          </Button>
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
-
       </div>
     </div>
   );
-}
+};
+
+export default TravelSlider;

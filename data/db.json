@@ -99,16 +99,16 @@
   {
     "id": 1,
     "title": "Udhëtim në Barcelonë",
-    "days": 4,
+    "days": "5 Dite / 4 Nete",
     "country": "Spanjë",
     "price": 422,
     "image": "/hero2.png",
-    "description": "Vizitoni Sagrada Familia dhe monumentet e tjera"
+    "description": "Vizitoni Sagrada Familia dhe monumentet e tjera Vizitoni Sagrada Familia dhe monumentet e tjera Vizitoni Sagrada Familia dhe monumentet e tjizitoni Sagrada Familia dhe monumentet e tjeraVizitoni Sagrada Familia dhe monumentet e tjera"
   },
   {
     "id": 2,
     "title": "Udhëtim në Madrid dhe Barcelonë",
-    "days": 5,
+    "days": "5 Dite / 4 Nete",
     "country": "Spanje",
     "price": 361,
     "image": "/hero2.png",
@@ -117,7 +117,7 @@
   {
     "id": 3,
     "title": "Udhëtim në Porto, Lisbonë, Madrid",
-    "days": 5,
+    "days": "4 Dite / 5 Nete",
     "country": "Spanje dhe Portugali",
     "price": 463,
     "image": "/hero2.png",
@@ -126,7 +126,7 @@
   {
     "id": 4,
     "title": "Udhëtim në Porto, Lisbonë, Madrid",
-    "days": 5,
+    "days": "3 Dite / 2 Nete",
     "country": "Spanje dhe Portugali",
     "price": 463,
     "image": "/hero2.png",
@@ -135,7 +135,7 @@
   {
     "id": 6,
     "title": "Udhëtim në Porto, Lisbonë, Madrid",
-    "days": 5,
+    "days": "4 Dite / 3 Nete",
     "country": "Spanje dhe Portugali",
     "price": 463,
     "image": "/hero2.png",

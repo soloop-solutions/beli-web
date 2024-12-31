@@ -48,31 +48,7 @@ const PlaneSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Decorative Elements - Hidden on mobile, visible on md and above */}
-        <div className="hidden md:block">
-          {[
-            { city: "Basel", img: "/hero2.png", position: "bottom-1 right-1/4" },
-            { city: "Zurich", img: "/zurich.jpg", position: "bottom-1/4 right-1" },
-            { city: "Geneva", img: "/geneva.jpg", position: "bottom-1 left-1/2" },
-            { city: "Lausanne", img: "/lausanne.jpg", position: "top-1/6 right-1/4" },
-            { city: "Prishtina", img: "/prishtina.jpg", position: "top-1/4 right-1" },
-          ].map(({ city, img, position }) => (
-            <div key={city} className={`absolute ${position} transform -translate-x-1/2 -translate-y-1/2`}>
-              <div className="relative group">
-                <div className="bg-white p-1 rounded-[30%] shadow-md w-12 h-12 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src={img}
-                    alt={`${city} preview`}
-                    className="rounded-full w-full h-full object-cover"
-                  />
-                </div>
-                <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 text-white text-xs bg-black bg-opacity-50 px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {city}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+
       </div>
     </div>
   );

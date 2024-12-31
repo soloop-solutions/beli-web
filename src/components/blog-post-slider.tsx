@@ -54,11 +54,11 @@ const BlogPostSlider: React.FC = () => {
   return (
     <div className="flex justify-center items-center  px-5">
       <div className="relative w-full h-full overflow-hidden px-4 mb-32">
-        <div className="flex justify-between mb-4">
+        <div className="flex justify-between ">
         <a href="/blog" className="hover:text-secondary-purple text-primary-blue text-m"> Te gjithe artikujt </a>
         </div>
 
-        <div className="relative mt-4 h-[90%] overflow-hidden">
+        <div className="relative  h-[90%] overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{
@@ -67,13 +67,13 @@ const BlogPostSlider: React.FC = () => {
             }}
           >
             {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-              <div key={slideIndex} className="flex w-full flex-shrink-0 gap-4">
+              <div key={slideIndex} className="flex w-full flex-shrink-0 gap-4 py-4">
                 {posts
                   .slice(slideIndex * postsPerSlide, (slideIndex + 1) * postsPerSlide)
                   .map((post) => (
                     <div
                       key={post.id}
-                      className="relative bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform w-1/3"
+                      className="relative bg-white rounded-lg shadow-md overflow-hidden  hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform w-1/3"
                     >
                       <div className="relative w-full aspect-video overflow-hidden transform translate-y-0 transition-transform duration-300 ease-in-out">
                         <img
@@ -89,14 +89,14 @@ const BlogPostSlider: React.FC = () => {
                       </div>
 
                       <div className="p-3">
-                        <div className="text-xs text-gray-500">
+                        <div className="text-xs text-left text-gray-500">
                           {new Date(post.date).toLocaleDateString('en-US', {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric',
                           })}
                         </div>
-                        <p className="mt-2 text-xs text-gray-400 line-clamp-2 text-left">{post.content}</p>
+                        <p className="mt-2 text-s text-gray-400 line-clamp-2 text-left ">{post.content}</p>
                         
                       </div>
                     </div>
