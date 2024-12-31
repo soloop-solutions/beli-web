@@ -59,22 +59,22 @@ const Navbar = () => {
             >
               <ul className="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-sm font-medium">
                 <li>
-                  <a href="/" className="block py-2 px-3 md:px-2 hover:text-secondary-purple text-primary-blue font-medium  transition-colors">
+                  <a href="/" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium  transition-colors">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="/pages" className="block py-2 px-3 md:px-2 hover:text-secondary-purple text-primary-blue font-medium  transition-colors">
+                  <a href="/pages" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium  transition-colors">
                     Offers
                     </a>
                 </li>
                 <li>
-                  <a href="/tours" className="block py-2 px-3 md:px-2 hover:text-secondary-purple text-primary-blue font-medium  transition-colors">
+                  <a href="/tours" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium  transition-colors">
                     Bus Tickets
                   </a>
                 </li>
                 <li>
-                  <a href="/blog" className="block py-2 px-3 md:px-2 hover:text-secondary-purple text-primary-blue font-medium  transition-colors">
+                  <a href="/blog" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium  transition-colors">
                     Plane Tickets
                   </a>
                 </li>

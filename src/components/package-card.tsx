@@ -39,7 +39,7 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
         </div>
         <div className="flex flex-col justify-between items-start text-xs text-gray-500 mb-4">
           <span className="font-medium">Perfshihet:</span>
-          <div className="flex flex-col items-start gap-2 py-2">
+          <div className="flex flex-row items-start gap-2 py-2">
            <div className="flex flex-row  gap-2">  Hoteli <Hotel className="w-4 h-4 text-secondary-blue" /></div>
            <div className="flex flex-row  gap-2">  Bileta <Plane className="w-4 h-4  text-secondary-blue " /></div>
            <div className="flex flex-row  gap-2">  Transporti <CarTaxiFront className="w-4 h-4  text-secondary-blue" /></div>

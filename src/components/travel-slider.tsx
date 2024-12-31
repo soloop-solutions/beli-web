@@ -86,14 +86,14 @@ const TravelSlider: React.FC = () => {
 
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
+            className="absolute left-2 top-1/3 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
+            className="absolute right-2 top-1/3 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
             aria-label="Next slide"
           >
             <ChevronRight className="h-5 w-5" />

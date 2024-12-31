@@ -5,6 +5,7 @@ import TravelSlider from "@/components/travel-slider";
 import TravelSection from "@/components/TravelSection"; 
 import BlogSection from "@/components/BlogSection"
 import HeroSection from "@/components/HeroSection";
+import BusSection from "@/components/bus";
 
 
 const Home: React.FC = () => {
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
 
         <TravelSection />
         <TravelSlider /> 
+        <BusSection />
         <PlaneSection /> 
         <BlogSection />  
         <BlogPostSlider />
