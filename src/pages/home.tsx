@@ -1,11 +1,11 @@
 import React from "react";
-import BlogPostSlider from '@/components/blog-post-slider' 
-//import PlaneSection from "@/components/plane"; 
+// import BlogPostSlider from '@/components/blog-post-slider' 
+import PlaneSection from "@/components/plane"; 
 // import TravelSlider from "@/components/travel-slider"; 
 import TravelSection from "@/components/TravelSection"; 
 import BlogSection from "@/components/BlogSection"
-// import HeroSection from "@/components/HeroSection";
-// import BusSection from "@/components/bus";
+import HeroSection from "@/components/HeroSection";
+import BusSection from "@/components/bus";
 
 
 const Home: React.FC = () => {
@@ -21,13 +21,13 @@ const Home: React.FC = () => {
         />
       </div>
      */}
-        {/* <HeroSection /> */}
+        <HeroSection />
         <TravelSection />
         {/* <TravelSlider />  */}
-        {/* <BusSection /> */}
-        {/* <PlaneSection />  */}
+        <BusSection />
+        <PlaneSection /> 
         <BlogSection />  
-        <BlogPostSlider />
+        {/* <BlogPostSlider /> */}
     </div>
   );
 };
