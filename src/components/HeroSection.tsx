@@ -1,6 +1,6 @@
 export default function HeroSection() {
     return (
-      <div className="relative h-[60vh] w-full overflow-hidden">
+      <div className="relative h-[60vh] w-full overflow-hidden mt-12">
         <img
           src="/hero3.png?height=1080&width=1920"
           alt="Hero background"
