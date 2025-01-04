@@ -14,7 +14,7 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
         <img
           src={pkg.image}
           alt={pkg.title}
-          className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
+          className="w-full h-full object-cover transition-all duration-300 "
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute top-2 left-2 bg-secondary-blue px-2 py-1 rounded-xl">
