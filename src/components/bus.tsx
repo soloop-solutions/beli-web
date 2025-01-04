@@ -9,14 +9,13 @@ const BusSection: React.FC = () => {
     { src: "/hero.png", alt: "Bus 5" },
     { src: "/beli-hero.png", alt: "Bus 6" },
   ];
-
   return (
-    <div className="bg-primary-blue relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12 mb-5">
+    <div className="bg-primary-blue relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12 mb-5" id="bus">
       <div className="container mx-auto max-w-4xl h-full flex flex-col justify-between relative">
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Content */}
-          <div className="w-full text-left text-white space-y-4 order-2 lg:order-1">
+          <div className="w-full text-left text-white space-y-4 order-2 lg:order-1 pl-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
               Linje e rregullt e autobusit
             </h1>

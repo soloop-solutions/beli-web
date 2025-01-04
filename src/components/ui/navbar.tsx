@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="flex items-center gap-6 md:hidden">         
             {/* Placeholder for mobile layout balance */}
           </div>
-          <div className="flex gap-4 items-center justify-center md:justify-end w-full md:w-auto">
+          <div className="flex gap-4 items-center justify-center pl-5 md:justify-end w-full md:w-auto">
             {socialIcons.map(({ href, icon: Icon, label }) => (
               <a key={label} href={href} className="text-white hover:text-pink-600">
                 <Icon className="h-5 w-5" aria-label={label} />
@@ -38,8 +38,8 @@ const Navbar = () => {
       </div>
 
       {/* White Navigation Bar */}
-      <div className="w-full flex justify-center absolute top-14 md:top-4">
-        <div className={`w-full md:w-[70%] bg-white transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'} rounded-lg shadow-md z-10`}>
+      <div className="w-full flex justify-center absolute top-14 md:top-4 ">
+        <div className={`w-full md:w-[70%] sm:w-[70%] bg-white transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'} rounded-lg shadow-md z-10`}>
           <div className="container mx-auto px-4 flex items-center justify-between">
             {/* Logo */}
             <a href="/">
@@ -68,17 +68,17 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/pages" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
+                  <a href={'/#offers'} className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
                     Offers
                   </a>
                 </li>
                 <li>
-                  <a href="/tours" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
+                  <a href={'/#bus'} className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
                     Bus Tickets
                   </a>
                 </li>
                 <li>
-                  <a href="/blog" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
+                  <a href={'/#plane'} className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
                     Plane Tickets
                   </a>
                 </li>

@@ -2,14 +2,14 @@ import React from "react";
 
 const PlaneSection: React.FC = () => {
   return (
-    <div className="bg-[#1C79B8] relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12">
+    <div className="bg-[#1C79B8] relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12" id="plane">
       <div className="container mx-auto max-w-4xl h-full flex flex-col justify-between relative">
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
-          <div className="w-full text-left text-white space-y-4 order-2 md:order-1">
+          <div className="w-full text-left text-white space-y-4 order-2 lg:order-1 pl-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-              Bilete aeroplani
+              Linje e rregullt e autobusit
             </h1>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
               Beli Travel ju mundeson linjen e rregullt te autobusit
