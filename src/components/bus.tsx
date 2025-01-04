@@ -7,24 +7,7 @@ const BusSection: React.FC = () => {
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-5">
           {/* Gallery Preview */}
-
-
-          {/* Text Content */}
-          <div className="w-full md:w-[80%] text-left text-white space-y-4 order-1 md:order-2">
-            <h1 className="text-2xl md:text-3xl font-bold leading-tight">
-            Linje e rregullt e autobusit
-            </h1>
-            <p className="text-base md:text-lg leading-relaxed">
-              Beli Travel ju mundeson linjen e rregullt te autobusit
-              Prishtine-Zurich-Prishtine, nisjet behen 3 here ne jave.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed">
-              Showcase travel tours and travel packages to your visitors with
-              SetSail's striking tour lists and single templates!
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg p-2 order-2 md:order-1 w-full md:w-[80%]">
+          <div className="bg-white rounded-lg p-2 order-1 md:order-2 w-full md:w-[80%]">
             <div className="grid grid-cols-3 gap-2">
               {[
                 { src: "/beli-hero.png", alt: "Bus 1" },
@@ -48,13 +31,25 @@ const BusSection: React.FC = () => {
               ))}
             </div>
           </div>
+
+          {/* Text Content */}
+          <div className="w-full md:w-[80%] text-left text-white space-y-4 order-2 md:order-1">
+            <h1 className="text-2xl md:text-3xl font-bold leading-tight">
+              Linje e rregullt e autobusit
+            </h1>
+            <p className="text-base md:text-lg leading-relaxed">
+              Beli Travel ju mundeson linjen e rregullt te autobusit
+              Prishtine-Zurich-Prishtine, nisjet behen 3 here ne jave.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed">
+              Showcase travel tours and travel packages to your visitors with
+              SetSail's striking tour lists and single templates!
+            </p>
+          </div>
         </div>
-
-
       </div>
     </div>
   );
 };
 
 export default BusSection;
-
