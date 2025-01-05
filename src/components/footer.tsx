@@ -6,12 +6,12 @@ const Footer: React.FC = () => {
   const year = today.getFullYear();
 
   return (
-    <footer className="bg-[#1E57A8] text-white sm:py-6 sm:pt-10">
+    <footer className="bg-[#1E57A8] text-white sm:py-6 pt-10">
       <div className="container mx-auto px-5">
-        <div className="flex flex-col lg:flex-row items-start lg:items-start space-y-8 lg:space-y-0 lg:space-x-10 w-full justify-between px-5">
+        <div className="flex flex-col lg:flex-row items-start lg:items-start space-y-8 lg:space-y-0 lg:space-x-10 w-full lg:justify-between px-5">
 
           {/* About Us Info */}
-          <div className="flex flex-col items-start lg:items-start w-full lg:w-1/3">
+          <div className="flex flex-col items-start lg:items-start w-full lg:w-1/2">
             <h1 className="text-lg font-semibold text-white pb-2">Rreth BELI Travel</h1>
             <div className="space-y-4 text-gray-200 text-sm">
               <p className="text-left">
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col items-start w-full lg:w-1/3">
+          <div className="flex flex-col items-start w-full lg:w-1/4">
             <h1 className="text-lg font-semibold text-white pb-2">Kontakti</h1>
             <div className="space-y-4 text-gray-200 text-sm">
               <p className="flex items-center">

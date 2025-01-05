@@ -38,7 +38,7 @@ const Navbar = () => {
       </div>
 
       {/* White Navigation Bar */}
-      <div className="w-full flex justify-center absolute top-14 md:top-4 ">
+      <div className="w-full flex justify-center absolute top-12 md:top-3 ">
         <div className={`w-full md:w-[70%] sm:w-[70%] bg-white transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'} rounded-lg shadow-md z-10`}>
           <div className="container mx-auto px-4 flex items-center justify-between">
             {/* Logo */}
@@ -48,7 +48,7 @@ const Navbar = () => {
 
             {/* Hamburger Menu */}
             <button
-              className="text-primary-blue hover:text-secondary-blue md:hidden"
+              className="text-primary-blue hover:text-secondary-blue md:hidden  bg-white border-primary-purple hover:border-primary-purple"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -64,27 +64,27 @@ const Navbar = () => {
               <ul className="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-sm font-medium">
                 <li>
                   <a href="/" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
-                    Home
+                    Ballina
                   </a>
                 </li>
                 <li>
                   <a href={'/#offers'} className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
-                    Offers
+                    Ofertat
                   </a>
                 </li>
                 <li>
                   <a href={'/#bus'} className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
-                    Bus Tickets
+                    Bileta te Autobusit
                   </a>
                 </li>
                 <li>
                   <a href={'/#plane'} className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
-                    Plane Tickets
+                    Bileta te Airoplanit
                   </a>
                 </li>
                 <li>
-                  <a href="/blog" className="block py-2 px-3 md:px-2 hover:text-secondary-purple text-primary-blue font-medium transition-colors">
-                    Blog
+                  <a href="/blog" className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
+                    Guida
                   </a>
                 </li>
               </ul>
