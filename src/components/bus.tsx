@@ -10,7 +10,7 @@ const BusSection: React.FC = () => {
     { src: "/beli-hero.png", alt: "Bus 6" },
   ];
   return (
-    <div className="bg-primary-blue relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12 mb-5" id="bus">
+    <div className="bg-primary-blue relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12 " id="bus">
       <div className="container mx-auto max-w-4xl h-full flex flex-col justify-between relative">
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

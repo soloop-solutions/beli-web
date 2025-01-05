@@ -65,7 +65,7 @@ const TravelSlider: React.FC = () => {
 
         <div className="relative h-full overflow-hidden">
           <div
-            className="flex transition-transform duration-500 ease-out"
+            className=" w-[50%] flex transition-transform duration-500 ease-out"
             style={{
               transform: `translateX(-${currentSlide * 100}%)`,
               width: `${totalSlides * 50}%`,

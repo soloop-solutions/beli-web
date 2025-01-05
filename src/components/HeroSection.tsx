@@ -2,11 +2,11 @@ export default function HeroSection() {
     return (
       <div className="relative h-[60vh] w-full overflow-hidden mt-12">
         <img
-          src="/hero3.png?height=1080&width=1920"
+          src="/hero-swiss.jpg?height=920&width=1080"
           alt="Hero background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-fill"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
+        <div className="absolute inset-0 bg-black bg-opacity-10" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Welcome to Our Website

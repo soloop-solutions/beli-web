@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { BlogPost } from '../types/BlogPost'
+import { ArrowRight } from 'lucide-react';
+
 
 
 const BlogPostSlider: React.FC = () => {
@@ -52,9 +54,12 @@ const BlogPostSlider: React.FC = () => {
   return (
     <div className="flex justify-center items-center  px-5">
       <div className="relative w-full h-full overflow-hidden px-4 mb-32">
-        <div className="flex justify-between ">
-        <a href="/blog" className="hover:text-secondary-purple text-primary-blue text-m"> Te gjithe artikujt </a>
-        </div>
+      <div className="flex items-center gap-x-1 underline">
+  <a href="/blog" className="hover:text-secondary-blue text-primary-blue text-sm flex items-center">
+    Te gjithe artikujt
+    <ArrowRight className="w-4 h-4 ml-1" />
+  </a>
+</div>
 
         <div className="relative  h-[90%] overflow-hidden">
           <div
