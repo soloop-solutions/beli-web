@@ -40,7 +40,7 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
       {/* Content Section */}
       <div className="p-4 flex flex-col justify-between h-[calc(100%-56.25%)]">
         <div>
-          <p className="text-sm text-gray-600 line-clamp-2 mb-4 text-left min-h-[40px]">{pkg.description}</p>
+          <p className="text-sm text-gray-600 line-clamp-2 mb-4 text-left min-h-[10%]">{pkg.description}</p>
           <div className="flex flex-col justify-between items-start text-xs text-gray-500 mb-4">
             <span className="font-medium">Perfshihet:</span>
             <div className="flex flex-wrap items-start gap-2 py-2">
