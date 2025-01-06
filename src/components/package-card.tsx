@@ -6,8 +6,13 @@ interface PackageCardProps {
   package: TravelPackage;
 }
 
+
+
 export function PackageCard({ package: pkg }: PackageCardProps) {
+  const phoneNumber = "37745501869"; // Replace with the actual phone number
+  const message = `Pershendetje, dua me shume informata rreth ofertes per ${pkg.title}`;
   return (
+    
     <div className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out h-full">
       {/* Image Section */}
       <div className="relative aspect-video overflow-hidden">
@@ -47,9 +52,11 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
         </div>
         <div className="flex justify-between items-center mt-auto">
           <span className="text-lg font-bold text-primary-blue">{pkg.price} €</span>
-          <Button variant="default" size="sm" className="rounded-full bg-secondary-blue">
+          <a href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">
+           <Button variant="default" size="sm" className="rounded-full bg-secondary-blue">
             Rezervo tani
           </Button>
+          </a>
         </div>
       </div>
     </div>

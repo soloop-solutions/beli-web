@@ -23,12 +23,12 @@ const TravelSection: React.FC = () => {
 
       {/* Title */}
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-        Ofertat nga BELI Travel
+        Ofertat
       </h2>
 
       {/* Description */}
       <p className="text-gray-600 text-sm sm:text-base max-w-2xl">
-        Beli Travel, ju ofron udhëtime te bukura, me shetitje sipas programit.
+        BELI Travel, ju ofron udhëtime te bukura, me shetitje sipas programit.
         Half board, All Inclusive si dhe shëtitje me autobus sipas programit.
       </p>
     </div>

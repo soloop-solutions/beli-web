@@ -52,7 +52,7 @@ const BlogSlider: React.FC = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="relative w-full h-full overflow-hidden px-7 mb-32">
-        <div className="flex items-center gap-x-1 underline mb-4">
+        <div className="flex items-center gap-x-1 underline mb-4 px-5">
           <a href="/blog" className="hover:text-secondary-blue text-primary-blue text-sm flex items-center">
             Te gjithe artikujt
             <ArrowRight className="w-4 h-4 ml-1" />
@@ -109,7 +109,7 @@ interface BlogPostCardProps {
 }
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => (
-  <div className="my-5 px-3 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-2 hover:border-[#E5502A]">
+  <div className="my-5 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:border-2 hover:border-[#E5502A] ">
     <div className="relative aspect-video">
       <img
         src={post.image}
