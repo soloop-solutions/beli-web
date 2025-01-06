@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { SingleBlogView } from '../components/SingleBlogView';
 import { fetchBlogPosts } from '../services/blogService';
 import { BlogPost } from '@/types/BlogPost';
-import BlogSection from "@/components/BlogSection"
+
 
 export function BlogPostPage() {
   const { id } = useParams<{ id: string }>();
@@ -41,8 +41,7 @@ export function BlogPostPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-           <BlogSection /> 
+    <div className="container mx-auto px-4 py-8 mt-20">
       <SingleBlogView post={post} />
     </div>
   );

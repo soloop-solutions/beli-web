@@ -4,6 +4,7 @@ import Home from './pages/home';
 import BlogPage from './pages/BlogPage';
 import Navbar from './components/ui/navbar';
 import Footer from './components/footer';
+import {BlogPostPage} from './pages/BlogPostPage';
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
            </Routes>
     <Footer />
     </Router>

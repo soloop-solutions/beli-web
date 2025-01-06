@@ -13,9 +13,9 @@ export function SingleBlogView({ post }: SingleBlogViewProps) {
         className="w-full h-64 object-cover"
       />
       <div className="p-6">
-        <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-        <p className="text-gray-600 mb-4">{post.author} - {post.date}</p>
-        <div className="prose max-w-none">
+        <h1 className="text-3xl font-bold mb-4 text-start">{post.title}</h1>
+        <p className="text-gray-600 mb-4 text-start"> {post.date}</p>
+        <div className="prose max-w-none text-start">
           {post.content.split('\n').map((paragraph, index) => (
             <p key={index} className="mb-4">{paragraph}</p>
           ))}

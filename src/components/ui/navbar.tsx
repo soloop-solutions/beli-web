@@ -79,7 +79,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a href={'/#plane'} className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors">
-                    Bileta te Airoplanit
+                    Bileta te Aeroplanit
                   </a>
                 </li>
                 <li>

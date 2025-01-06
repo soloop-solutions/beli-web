@@ -6,6 +6,7 @@ import TravelSection from "@/components/TravelSection";
 import BlogSection from "@/components/BlogSection"
 import HeroSection from "@/components/HeroSection";
 import BusSection from "@/components/bus";
+import BlogSlider from "@/components/blogslider";
 
 
 const Home: React.FC = () => {
@@ -28,6 +29,7 @@ const Home: React.FC = () => {
         <PlaneSection /> 
         <BlogSection />  
         <BlogPostSlider />
+        <BlogSlider />
     </div>
   );
 };

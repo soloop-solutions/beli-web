@@ -55,15 +55,15 @@ const BlogPostSlider: React.FC = () => {
     <div className="flex justify-center items-center  px-5">
       <div className="relative w-full h-full overflow-hidden px-4 mb-32">
       <div className="flex items-center gap-x-1 underline">
-  <a href="/blog" className="hover:text-secondary-blue text-primary-blue text-sm flex items-center">
-    Te gjithe artikujt
-    <ArrowRight className="w-4 h-4 ml-1" />
-  </a>
-</div>
+        <a href="/blog" className="hover:text-secondary-blue text-primary-blue text-sm flex items-center">
+          Te gjithe artikujt
+          <ArrowRight className="w-4 h-4 ml-1" />
+        </a>
+      </div>
 
         <div className="relative  h-[90%] overflow-hidden">
           <div
-            className="flex transition-transform duration-500 ease-out"
+            className="flex transition-transform "
             style={{
               transform: `translateX(-${currentSlide * 100}%)`,
               width: `${totalSlides * 50}%`,
@@ -76,13 +76,13 @@ const BlogPostSlider: React.FC = () => {
                   .map((post) => (
                     <div
                       key={post.id}
-                      className="relative bg-white rounded-lg shadow-md overflow-hidden  hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform w-1/3"
+                      className="relative bg-white rounded-lg shadow-md overflow-hidden hover:border-2 hover:border-[#E5502A]  w-1/3"
                     >
-                      <div className="relative w-full aspect-video overflow-hidden transform translate-y-0 transition-transform duration-300 ease-in-out">
+                      <div className="relative w-full aspect-video overflow-hidden">
                         <img
                           src={post.image}
                           alt={post.title}
-                          className="w-full h-[100%] object-cover transition-all duration-300"
+                          className="w-full h-[100%] object-cover  "
                         />
                         <div className="text-left absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
 
@@ -110,14 +110,14 @@ const BlogPostSlider: React.FC = () => {
 
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
+            className="absolute left-2 top-1/3 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
+            className="absolute right-2 top-1/3 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
             aria-label="Next slide"
           >
             <ChevronRight className="h-5 w-5" />
