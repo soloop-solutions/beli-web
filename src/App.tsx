@@ -1,10 +1,10 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/home';
-import BlogPage from './pages/BlogPage';
+import Home from '../home';
+import BlogPage from '../BlogPage';
 import Navbar from './components/ui/navbar';
 import Footer from './components/footer';
-import {BlogPostPage} from './pages/BlogPostPage';
+import {BlogPostPage} from '../BlogPostPage';
 
 
 

@@ -61,7 +61,7 @@ const BlogSlider: React.FC = () => {
 
         <div className="relative overflow-hidden ">
           <div
-            className="flex transition-transform duration-300 ease-in-out"
+            className="flex"
             style={{
               transform: `translateX(-${currentSlide * 100}%)`,
               width: `${totalSlides * 50}%`,
