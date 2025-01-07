@@ -59,7 +59,7 @@ const BlogSlider: React.FC = () => {
           </a>
         </div>
 
-        <div className="relative overflow-hidden ">
+        <div className="relative overflow-hidden">
           <div
             className="flex"
             style={{
@@ -69,7 +69,7 @@ const BlogSlider: React.FC = () => {
           >
             {Array.from({ length: totalSlides }).map((_, slideIndex) => (
               <div key={slideIndex} className="w-full flex-shrink-0">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {posts
                     .slice(slideIndex * POSTS_PER_SLIDE, (slideIndex + 1) * POSTS_PER_SLIDE)
                     .map((post) => (
@@ -109,7 +109,7 @@ interface BlogPostCardProps {
 }
 
 const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => (
-  <div className="my-5 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:border-2 hover:border-[#E5502A] ">
+  <div className="my-5 bg-white rounded-lg shadow-md overflow-hidden border-2 border-transparent hover:shadow-xl hover:border-[#E5502A]">
     <div className="relative aspect-video">
       <img
         src={post.image}
