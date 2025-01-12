@@ -7,7 +7,7 @@ interface BlogListProps {
 
 export function BlogList({ posts }: BlogListProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-11 px-5 mb-12 pt-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-11 px-5 mb-12 t-10">
       {posts.map((post) => (
         <div
           key={post.id}

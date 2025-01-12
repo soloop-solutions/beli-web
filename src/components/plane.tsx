@@ -10,7 +10,7 @@ const PlaneSection: React.FC = () => {
         {/* Main Content */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 text-left text-white space-y-4 order-2 md:order-1">
+          <div className="w-full md:w-1/2 text-left text-white space-y-4 order-2 md:order-1 pl-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
               Linje e rregullt e autobusit
             </h1>
