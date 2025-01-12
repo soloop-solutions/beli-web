@@ -31,13 +31,11 @@ export function BlogPage() {
   }
 
   return (
-    <div className="container w-full mx-auto px-4 my-24">     
+    <div className="container w-full mx-auto px-4 ">     
 
-<div className="flex flex-row items-center text-center px-4">
-    
-
+      <div className="flex flex-row items-center text-center px-5 mt-12"> 
       {/* Title */}
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h2 className="text-2xl font-semibold text-primary-blue hover:text-primary-purple mb-4 mt-12">
        Guidat e fundit
       </h2>
 

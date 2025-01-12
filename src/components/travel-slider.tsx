@@ -1,107 +1,49 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { PackageCard } from '../components/package-card';
+import React from 'react'
+import useSWR from 'swr'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { PackageCard } from './package-card'
+import { Card, CardContent } from "@/components/ui/card"
 
 interface TravelPackage {
-  id: number;
-  title: string;
-  days: number;
-  country: string;
-  price: number;
-  image: string;
-  description: string;
+  id: number
+  title: string
+  days: number
+  country: string
+  price: number
+  image: string
+  description: string
 }
 
-const TravelSlider: React.FC = () => {
-  const [packages, setPackages] = useState<TravelPackage[]>([]);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-  useEffect(() => {
-    const fetchPackages = async () => {
-      try {
-        const response = await fetch('/data/db.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch travel packages');
-        }
-        const data = await response.json();
-        setPackages(data.packages);
-        setIsLoading(false);
-      } catch {
-        setError('Error fetching travel packages. Please try again later.');
-        setIsLoading(false);
-      }
-    };
-
-    fetchPackages();
-  }, []);
-
-  const packagesPerSlide = 3;
-  const totalSlides = Math.ceil(packages.length / packagesPerSlide);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+export function TravelSlider() {
+  const { data, error, isLoading } = useSWR<{ packages: TravelPackage[] }>('/data/db.json', fetcher)
 
   if (isLoading) {
-    return <div className="text-center py-10">Loading travel packages...</div>;
+    return <Card className="w-full"><CardContent className="flex items-center justify-center h-[300px]">Loading travel packages...</CardContent></Card>
   }
 
   if (error) {
-    return <div className="text-center py-10 text-red-500">{error}</div>;
+    return <Card className="w-full"><CardContent className="flex items-center justify-center h-[300px] text-red-500">Error fetching travel packages. Please try again later.</CardContent></Card>
   }
 
+  const packages = data?.packages || []
+
   return (
-    <div className="flex justify-center items-center px-5">
-      <div className="relative w-full h-full overflow-hidden px-4 mb-32">
-
-
-        <div className="relative h-full overflow-hidden">
-          <div
-            className=" w-[50%] flex transition-transform duration-500 ease-out"
-            style={{
-              transform: `translateX(-${currentSlide * 100}%)`,
-              width: `${totalSlides * 50}%`,
-            }}
-          >
-            {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-              <div key={slideIndex} className="flex w-full flex-shrink-0 gap-4 py-4">
-                {packages
-                  .slice(slideIndex * packagesPerSlide, (slideIndex + 1) * packagesPerSlide)
-                  .map((pkg) => (
-                    <div key={pkg.id} className="w-1/3">
-                      <PackageCard package={pkg} />
-                    </div>
-                  ))}
-              </div>
-            ))}
-          </div>
-
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 top-1/3 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 top-1/3 -translate-y-1/2 rounded-full bg-white/80 p-2 shadow-lg hover:bg-white"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default TravelSlider;
+    <Carousel className="w-full max-w-5xl mx-auto pb-10">
+      <CarouselContent>
+        {packages.map((pkg) => (
+          <CarouselItem key={pkg.id} className="basis-[90%] md:basis-1/2 lg:basis-1/3 mx-auto sm:mx-0">
+            <div className="p-1">
+              <PackageCard package={pkg} />
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  )
+}
