@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { SingleBlogView } from '@/components/SingleBlogView';
-import { fetchBlogPosts } from '@/services/blogService';
-import { BlogPost } from '@/types/BlogPost';
-
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { SingleBlogView } from "@/components/SingleBlogView";
+import { fetchBlogPosts } from "@/services/blogService";
+import { BlogPost } from "@/types/BlogPost";
 
 export function BlogPostPage() {
   const { id } = useParams<{ id: string }>();
@@ -12,20 +11,29 @@ export function BlogPostPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchBlogPosts()
-      .then((posts) => {
-        const foundPost = posts.find((p) => p.id === parseInt(id as string));
+    if (!id) {
+      setError("Invalid blog post ID");
+      setLoading(false);
+      return;
+    }
+
+    const fetchData = async () => {
+      try {
+        const posts = await fetchBlogPosts();
+        const foundPost = posts.find((p) => p.id === parseInt(id, 10)); // Ensure proper ID parsing
         if (foundPost) {
           setPost(foundPost);
         } else {
-          setError('Blog post not found');
+          setError("Blog post not found");
         }
+      } catch  {
+        setError("Failed to fetch blog post");
+      } finally {
         setLoading(false);
-      })
-      .catch(() => {
-        setError('Failed to fetch blog post');
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, [id]);
 
   if (loading) {

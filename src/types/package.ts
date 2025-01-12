@@ -6,6 +6,7 @@ export interface TravelPackage {
     price: number
     image: Image
     description: string
+    
   };
   export interface Image {
   id: number;
@@ -24,5 +25,8 @@ export interface Package {
   price: number
   image: Image
   description: string
+  hasHotel: string;
+  hasFlight: string;
+  hasTransfer: string;
 }
 

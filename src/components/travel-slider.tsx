@@ -18,10 +18,13 @@ interface TravelPackage {
   days: number;
   country: string;
   price: number;
-  image: Image;
+  image: TravelImage;
   description: string;
+  hasHotel: string;
+  hasFlight: string;
+  hasTransfer: string;
 }
-interface Image {
+interface TravelImage {
   id: number;
   documentId: string;
   name: string;

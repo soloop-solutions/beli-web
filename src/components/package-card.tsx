@@ -31,33 +31,39 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
             {pkg.days}
           </Badge>
           <Badge className="absolute top-2 right-2 bg-secondary-purple text-white">
-          {pkg.country}
+            {pkg.country}
           </Badge>
-          <h3 className="absolute bottom-2 left-2 right-2 text-lg font-semibold text-white">
-           
+          
+          {/* Title overlay */}
+          <h3 className="absolute bottom-2 left-2 right-2 text-lg font-semibold text-white z-10 text-left">
+            {pkg.title}
           </h3>
         </div>
       </CardHeader>
       <CardContent className="p-4 flex flex-col justify-between h-[calc(100%-56.25%)]">
         <div>
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-4 text-left min-h-[10%]">
-            {pkg.title}
-          </p>
-          <p className="text-sm text-muted-foreground line-clamp-2 mb-4 text-left min-h-[10%]">
+       
+          <p className="text-sm text-muted-foreground line-clamp-4 mb-4 text-left min-h-[50px]">
             {pkg.description}
           </p>
           <div className="flex flex-col justify-between items-start text-xs text-muted-foreground mb-4">
             <span className="font-medium">Perfshihet:</span>
             <div className="flex flex-wrap items-start gap-2 py-2">
-              <div className="flex items-center gap-1">
-                Hoteli <Hotel className="w-4 h-4 text-secondary-blue" />
-              </div>
-              <div className="flex items-center gap-1">
-                Bileta <Plane className="w-4 h-4 text-secondary-blue" />
-              </div>
-              <div className="flex items-center gap-1">
-                Transporti <CarTaxiFront className="w-4 h-4 text-secondary-blue" />
-              </div>
+              {pkg.hasHotel ? (
+                <div className="flex items-center gap-1">
+                  Hoteli <Hotel className="w-4 h-4 text-secondary-blue" />
+                </div>
+              ) : null}
+              {pkg.hasFlight ? (
+                <div className="flex items-center gap-1">
+                  Bileta <Plane className="w-4 h-4 text-secondary-blue" />
+                </div>
+              ) : null}
+              {pkg.hasTransfer ? (
+                <div className="flex items-center gap-1">
+                  Transporti <CarTaxiFront className="w-4 h-4 text-secondary-blue" />
+                </div>
+              ) : null}
             </div>
           </div>
         </div>
@@ -77,4 +83,3 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
     </Card>
   );
 }
-

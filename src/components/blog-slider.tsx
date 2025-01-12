@@ -63,6 +63,7 @@ export default function BlogSlider() {
     }
   };
 
+
   // Fetch data on component mount
   useEffect(() => {
     fetchData();
@@ -108,12 +109,18 @@ export default function BlogSlider() {
 
                   {/* Content Section */}
                   <div className="p-3 sm:p-4 text-left">
-                    <h2 className="text-base sm:text-lg font-semibold mb-2 text-primary-blue truncate">
+                    <h2 className="text-base sm:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 truncate-2 h-[3.5rem]">
                       {post.Title}
                     </h2>
                     <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
-                      {post.createdAt}
-                    </p>
+                    {(() => {
+                      const date = new Date(post.createdAt); // Convert post.createdAt to a Date object
+                      const year = date.getFullYear();
+                      const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+                      const day = String(date.getDate()).padStart(2, '0');
+                      return `${day}/${month}/${year}`; // Format as DD/MM/YYYY
+                    })()}
+                  </p>
                     <p className="text-sm sm:text-base text-gray-500 mb-4 line-clamp-2">
                       {post.Description}
                     </p>
