@@ -14,7 +14,7 @@ export function BlogList({ posts }: BlogListProps) {
           className="relative bg-white rounded-lg shadow-md overflow-hidden hover:scale-105 hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform"
         >
           {/* Image Section */}
-          <div className="relative w-full aspect-video overflow-hidden transform translate-y-0  transition-transform duration-300 ease-in-out">
+          <div className="relative w-full aspect-video overflow-hidden transform translate-y-0 transition-transform duration-300 ease-in-out">
             <img
               src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
               alt={post.Title}
@@ -27,7 +27,7 @@ export function BlogList({ posts }: BlogListProps) {
             <h2 className="text-base sm:text-lg font-semibold mb-2 text-primary-blue truncate">
               {post.Title}
             </h2>
-            <p className=" flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
+            <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
             {(() => {
                       const date = new Date(post.createdAt); // Convert post.createdAt to a Date object
                       const year = date.getFullYear();

@@ -60,7 +60,7 @@ export function TravelSlider() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://dolphin-app-muwul.ondigitalocean.app/api/offers?populate=*",
+        "https://dolphin-app-muwul.ondigitalocean.app/api/offers?sort[publishedAt]=desc&populate=*",
         {
           headers: {
             Authorization: `e1f0c662bab98622f7144f3238380b5eac801c0d2a7ec13ab4832e65709c9b258244e3aa713ad4ead3fb8da919535cdcd2a36b51ce0080b3adf0eafb7c6f89d0c4ba9c528b3455237e3e5b2b6c48dc6d4da50c97dd50d9c86f497e28ca59d030a4d088f18b2835a3562d8a238b6a3bc71182e95705efcaf1bb2d63234a01a5d9`, // Add your access token if required
