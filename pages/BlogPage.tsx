@@ -35,7 +35,7 @@ export function BlogPage() {
 
       <div className="flex flex-row items-center text-center px-5 mt-12"> 
       {/* Title */}
-      <h2 className="text-2xl font-semibold text-primary-blue hover:text-primary-purple mb-4 mt-12">
+      <h2 className="text-2xl font-semibold text-primary-blue hover:textmb-4 mt-12">
        Guidat e fundit
       </h2>
 
