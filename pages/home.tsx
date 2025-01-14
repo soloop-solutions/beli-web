@@ -6,7 +6,7 @@ import TravelSection from "@/components/TravelSection";
 import BlogSection from "@/components/BlogSection";
 import HeroSection from "@/components/HeroSection";
 import BusSection from "@/components/bus";
-// import BlogSlider from "@/components/blog-slider";
+import BlogSlider from "@/components/blog-slider";
 
 const Home: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       <BusSection />
       <PlaneSection /> 
       <BlogSection />  
-      {/* <BlogSlider /> */}
+      <BlogSlider />
     </div>
   );
 };

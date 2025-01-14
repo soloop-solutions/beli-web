@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/carousel";
 import axios from "axios";
 
-
 interface Picture {
   id: number;
   documentId: string;
@@ -19,7 +18,6 @@ interface Picture {
   alternativeText: string | null;
   caption: string | null;
   url: string;
-  // Any other fields that the picture might have
 }
 
 interface BlogPost {
@@ -37,19 +35,17 @@ export default function BlogSlider() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Function to fetch data using Axios
   const fetchData = async () => {
     try {
       const response = await axios.get(
         "https://dolphin-app-muwul.ondigitalocean.app/api/blogs?populate=*",
         {
           headers: {
-            Authorization: `e1f0c662bab98622f7144f3238380b5eac801c0d2a7ec13ab4832e65709c9b258244e3aa713ad4ead3fb8da919535cdcd2a36b51ce0080b3adf0eafb7c6f89d0c4ba9c528b3455237e3e5b2b6c48dc6d4da50c97dd50d9c86f497e28ca59d030a4d088f18b2835a3562d8a238b6a3bc71182e95705efcaf1bb2d63234a01a5d9`, // Add your access token if required
+            Authorization: `e1f0c662bab98622f7144f3238380b5eac801c0d2a7ec13ab4832e65709c9b258244e3aa713ad4ead3fb8da919535cdcd2a36b51ce0080b3adf0eafb7c6f89d0c4ba9c528b3455237e3e5b2b6c48dc6d4da50c97dd50d9c86f497e28ca59d030a4d088f18b2835a3562d8a238b6a3bc71182e95705efcaf1bb2d63234a01a5d9`,
           },
         }
       );
 
-      // Set data from the response (Strapi data is usually in `response.data.data`)
       setPosts(response.data.data);
       setLoading(false);
     } catch (err: unknown) {
@@ -63,8 +59,6 @@ export default function BlogSlider() {
     }
   };
 
-
-  // Fetch data on component mount
   useEffect(() => {
     fetchData();
   }, []);
@@ -78,8 +72,8 @@ export default function BlogSlider() {
   }
 
   return (
-    <section className="w-full py-4">
-      <div className="mx-auto lg:max-w-6xl px-3">
+    <section className="w-full py-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-full lg:max-w-6xl relative">
         <Carousel
           opts={{
             loop: true,
@@ -90,15 +84,15 @@ export default function BlogSlider() {
               delay: 2000,
             }),
           ]}
+          className="w-full"
         >
           <CarouselContent>
             {posts.map((post) => (
               <CarouselItem
                 key={post.id}
-                className="md:basis-1/2 lg:basis-1/3"
+                className="sm:basis-1/2 lg:basis-1/3 pl-4"
               >
-                <div className="relative bg-white rounded-lg shadow-md overflow-hidden  hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform my-5 mx-2">
-                  {/* Image Section */}
+                <div className="relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform my-5">
                   <div className="relative w-full aspect-video overflow-hidden transform translate-y-0 transition-transform duration-300 ease-in-out">
                     <img
                       src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
@@ -106,27 +100,25 @@ export default function BlogSlider() {
                       className="w-full h-full object-cover transition-all duration-300"
                     />
                   </div>
-
-                  {/* Content Section */}
                   <div className="p-3 sm:p-4 text-left">
-                    <h2 className="text-base sm:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 truncate-2 h-[3.5rem]">
+                    <h2 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 h-[2.5rem] sm:h-[3rem] lg:h-[3.5rem]">
                       {post.Title}
                     </h2>
                     <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
-                    {(() => {
-                      const date = new Date(post.createdAt); // Convert post.createdAt to a Date object
-                      const year = date.getFullYear();
-                      const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-                      const day = String(date.getDate()).padStart(2, '0');
-                      return `${day}/${month}/${year}`; // Format as DD/MM/YYYY
-                    })()}
-                  </p>
-                    <p className="text-sm sm:text-base text-gray-500 mb-4 line-clamp-2">
+                      {(() => {
+                        const date = new Date(post.createdAt);
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, '0');
+                        const day = String(date.getDate()).padStart(2, '0');
+                        return `${day}/${month}/${year}`;
+                      })()}
+                    </p>
+                    <p className="text-xs sm:text-sm lg:text-base text-gray-500 mb-4 line-clamp-2">
                       {post.Description}
                     </p>
                     <a
                       href={`/blog/${post.id}`}
-                      className="flex justify-end text-secondary-purple hover:text-primary-blue text-sm sm:text-base"
+                      className="flex justify-end text-secondary-purple hover:text-primary-blue text-xs sm:text-sm lg:text-base"
                     >
                       Me shume
                     </a>
@@ -135,10 +127,13 @@ export default function BlogSlider() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 fill-black" />
-          <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 fill-black" />
+          <div className="hidden sm:block">
+            <CarouselPrevious className="absolute left-[-40px] top-1/2 -translate-y-1/2 fill-black" />
+            <CarouselNext className="absolute right-[-40px] top-1/2 -translate-y-1/2 fill-black" />
+          </div>
         </Carousel>
       </div>
     </section>
   );
 }
+

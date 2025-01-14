@@ -22,7 +22,7 @@ const BusSection: React.FC = () => {
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           {/* Text Content */}
-          <div className="w-full lg:w-1/2 text-left text-white space-y-4 order-2 lg:order-1 p-5">
+          <div className="w-full lg:w-1/2 text-left text-white space-y-4 order-2 lg:order-1 lg:p-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
               Linje e rregullt e autobusit
             </h1>
