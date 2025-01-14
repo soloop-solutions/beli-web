@@ -16,4 +16,3 @@ export interface BlogPost {
   url: string;
   // Any other fields that the picture might have
 }
-

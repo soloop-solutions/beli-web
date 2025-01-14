@@ -41,10 +41,10 @@ export function BlogList({ posts }: BlogListProps) {
             </p>
     
             <a
-              href={`/blog/${post.id}`}
+              href={`/blog/${post.documentId}`}
               className="flex justify-end text-secondary-purple hover:text-primary-blue text-sm sm:text-base"
             >
-              Me shume
+              Më shumë
             </a>
           </div>
         </div>

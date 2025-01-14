@@ -14,7 +14,6 @@ const fetchBlogPosts = async () => {
         },
       }
     );
-    console.log(response)
     return response.data.data; // Return the posts data from the API
   } catch{
     throw new Error("Failed to fetch blog posts");

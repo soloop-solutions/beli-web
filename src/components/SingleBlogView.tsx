@@ -1,24 +1,32 @@
-import { BlogPost } from '@/types/BlogPost';
+import { BlogPost } from "@/types/BlogPost";
 
-interface SingleBlogViewProps {
-  post: BlogPost;
-}
+export function SingleBlogView({ post }: { post: BlogPost }) {
 
-export function SingleBlogView({ post }: SingleBlogViewProps) {
+
+  
+  const { Title, createdAt, Description, Picture } = post.data;
+
   return (
-    <article className="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-      <img
-        src={'https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}'}
-        alt={'post.Title'}
-        className="w-full h-64 object-cover"
-      />
-      <div className="p-6">
-        <h1 className="text-3xl font-bold mb-4 text-start">{post.Title}</h1>
-        <p className="text-gray-600 mb-4 text-start"> {post.createdAt}</p>
-        <div className="prose max-w-none text-start">
-          {post.Description}
-          </div>
+    <div className="container mx-auto px-4 py-8 mt-20">
+      <div className="max-w-3xl mx-auto">
+        
+      {Picture?.url ? (
+          <img
+            src={Picture.url}
+            alt={Title}
+            className="mt-4 rounded-lg shadow-lg w-full"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        ) : (
+          <p className="text-center mt-4 text-gray-500">No image available</p>
+        )}
+        <h1 className="text-4xl font-bold text-center mb-4 text-start">{Title || "No title available"}</h1>
+        <p className="text-sm text-gray-500 text-center mb-6 text-start">
+          {createdAt ? new Date(createdAt).toLocaleDateString() : "Date not available"}
+        </p>
+        <div className="text-lg text-gray-700 mb-6 text-left">{Description || "No description available"}</div>
+
       </div>
-    </article>
+    </div>
   );
 }
