@@ -72,12 +72,13 @@ export default function BlogSlider() {
   }
 
   return (
-    <section className="w-full py-4 px-4 sm:px-6 lg:px-8">
+    <section className="w-full py-4 px-2 sm:px-4 md:px-6 lg:px-8">
       <div className="mx-auto max-w-full lg:max-w-6xl relative">
         <Carousel
           opts={{
             loop: true,
             align: "start",
+            dragFree: true,
           }}
           plugins={[
             Autoplay({
@@ -86,13 +87,10 @@ export default function BlogSlider() {
           ]}
           className="w-full"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-2 md:-ml-4">
             {posts.map((post) => (
-              <CarouselItem
-                key={post.id}
-                className="sm:basis-1/2 lg:basis-1/3 pl-4"
-              >
-                <div className="relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform my-5">
+              <CarouselItem key={post.id} className="pl-2 md:pl-4 basis-3/4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform my-2 sm:my-4">
                   <div className="relative w-full aspect-video overflow-hidden transform translate-y-0 transition-transform duration-300 ease-in-out">
                     <img
                       src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
@@ -100,11 +98,11 @@ export default function BlogSlider() {
                       className="w-full h-full object-cover transition-all duration-300"
                     />
                   </div>
-                  <div className="p-3 sm:p-4 text-left">
-                    <h2 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 h-[2.5rem] sm:h-[3rem] lg:h-[3.5rem]">
+                  <div className="p-2 sm:p-3 md:p-4 text-left">
+                    <h2 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-1 sm:mb-2 text-primary-blue line-clamp-2 h-8 sm:h-10 md:h-12 lg:h-14">
                       {post.Title}
                     </h2>
-                    <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
+                    <p className="flex justify-content-start text-[10px] sm:text-xs md:text-sm text-gray-300 mb-1 sm:mb-2">
                       {(() => {
                         const date = new Date(post.createdAt);
                         const year = date.getFullYear();
@@ -113,12 +111,12 @@ export default function BlogSlider() {
                         return `${day}/${month}/${year}`;
                       })()}
                     </p>
-                    <p className="text-xs sm:text-sm lg:text-base text-gray-500 mb-4 line-clamp-2">
+                    <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-500 mb-2 sm:mb-3 md:mb-4 line-clamp-2">
                       {post.Description}
                     </p>
                     <a
                       href={`/blog/${post.id}`}
-                      className="flex justify-end text-secondary-purple hover:text-primary-blue text-xs sm:text-sm lg:text-base"
+                      className="flex justify-end text-secondary-purple hover:text-primary-blue text-[10px] sm:text-xs md:text-sm lg:text-base"
                     >
                       Me shume
                     </a>
@@ -128,8 +126,8 @@ export default function BlogSlider() {
             ))}
           </CarouselContent>
           <div className="hidden sm:block">
-            <CarouselPrevious className="absolute left-[-40px] top-1/2 -translate-y-1/2 fill-black" />
-            <CarouselNext className="absolute right-[-40px] top-1/2 -translate-y-1/2 fill-black" />
+            <CarouselPrevious className="absolute left-[-20px] sm:left-[-30px] md:left-[-40px] top-1/2 -translate-y-1/2 fill-black" />
+            <CarouselNext className="absolute right-[-20px] sm:right-[-30px] md:right-[-40px] top-1/2 -translate-y-1/2 fill-black" />
           </div>
         </Carousel>
       </div>
