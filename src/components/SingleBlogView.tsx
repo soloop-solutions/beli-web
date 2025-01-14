@@ -8,7 +8,7 @@ export function SingleBlogView({ post }: SingleBlogViewProps) {
   return (
     <article className="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
       <img
-        src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
+        src={'https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}'}
         alt={'post.Title'}
         className="w-full h-64 object-cover"
       />
