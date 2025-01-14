@@ -4,7 +4,7 @@ export function SingleBlogView({ post }: { post: BlogPost }) {
 
 
   
-  const { Title, createdAt, Description, Picture } = post.data;
+  const { Title, createdAt, Description, Picture } = post;
 
   return (
     <div className="container mx-auto px-4 py-8 mt-20">
