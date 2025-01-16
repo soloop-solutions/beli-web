@@ -1,32 +1,52 @@
+import React from "react";
 import { BlogPost } from "@/types/BlogPost";
 
-export function SingleBlogView({ post }: { post: BlogPost }) {
+interface SingleBlogViewProps {
+  post: BlogPost;
+}
 
-
-  
-  const { Title, createdAt, Description, Picture } = post;
+export const SingleBlogView: React.FC<SingleBlogViewProps> = ({ post }) => {
+  console.log("SingleBlogView received post:", post);
+  console.log("Title received post:", post.Title);
+  console.log("Description received post:", post.Description);
 
   return (
-    <div className="container mx-auto px-4 py-8 mt-20">
-      <div className="max-w-3xl mx-auto">
-        
-      {Picture?.url ? (
-          <img
-            src={Picture.url}
-            alt={Title}
-            className="mt-4 rounded-lg shadow-lg w-full"
-            style={{ maxWidth: "100%", height: "auto" }}
-          />
-        ) : (
-          <p className="text-center mt-4 text-gray-500">No image available</p>
-        )}
-        <h1 className="text-4xl font-bold text-center mb-4 text-start">{Title || "No title available"}</h1>
-        <p className="text-sm text-gray-500 text-center mb-6 text-start">
-          {createdAt ? new Date(createdAt).toLocaleDateString() : "Date not available"}
-        </p>
-        <div className="text-lg text-gray-700 mb-6 text-left">{Description || "No description available"}</div>
-
+<article className="sm:basis-1/2 lg:basis-1/3 lg:px-20 sm:px-5">
+  <div className="relative bg-white rounded-lg shadow-md overflow-hidden my-5">
+    {post.Picture && (
+      <div className="relative h-[50%] overflow-hidden">
+      <img
+        src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
+        alt={post.Picture.alternativeText || "Blog Image"}
+        className="w-full h-[30rem]  object-fill"
+      />
       </div>
+    )}
+    <div className="p-3 sm:p-4 text-left">
+      <h1 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 h-[2.5rem] sm:h-[3rem] lg:h-[3.5rem]">
+        {post.Title}
+      </h1>
+      <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
+        {(() => {
+          const date = new Date(post.createdAt);
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, "0");
+          const day = String(date.getDate()).padStart(2, "0");
+          return `${day}/${month}/${year}`;
+        })()}
+      </p>
+      <div className="text-xs sm:text-sm lg:text-base text-gray-500 mb-4 space-y-3">
+  {post.Description.split("\n").map((paragraph, index) => (
+    <p key={index} className="leading-relaxed">
+      {paragraph}
+    </p>
+  ))}
+</div>
+
+
     </div>
+  </div>
+</article>
+
   );
-}
+};

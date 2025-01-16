@@ -3,45 +3,40 @@ import { useParams } from "react-router-dom";
 import { SingleBlogView } from "@/components/SingleBlogView";
 import { BlogPost } from "@/types/BlogPost";
 
-// The fetchSingleBlog function fetches a specific blog post by its ID
+// Fetch blog post function
 const fetchSingleBlog = async (documentId: string): Promise<BlogPost> => {
-  try {
-    const response = await fetch(`https://dolphin-app-muwul.ondigitalocean.app/api/blogs/${documentId}`);
-
-    if (!response.ok) {
-      // Log the status and error message for better debugging
-      const errorDetails = await response.text();
-      throw new Error(`Failed to fetch blog post: ${response.status} - ${errorDetails}`);
-    }
-
-    const data = await response.json();
-    return data; // Assume the response returns a single BlogPost object
-  } catch (error: unknown) {
-    console.error("Error in fetchSingleBlog:", error); // Log the error to console
-    throw error; // Rethrow error so it can be handled in useEffect
+  const response = await fetch(
+    `https://dolphin-app-muwul.ondigitalocean.app/api/blogs/${documentId}?populate=*`
+  );
+  if (!response.ok) {
+    throw new Error(`Error fetching blog: ${response.statusText}`);
   }
+
+  const {data} = await response.json();
+  return data
 };
 
+// Main BlogPostPage component
 const BlogPostPage: React.FC = () => {
   const { documentId } = useParams<{ documentId: string }>();
   const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-
     if (!documentId) {
-      setError("Invalid blog post ID");
+      setError("Invalid blog ID.");
       setLoading(false);
       return;
     }
 
     const fetchData = async () => {
       try {
-        const postData = await fetchSingleBlog(documentId);
-        setPost(postData); // Set the post if found
-      } catch {
-        setError("Failed to fetch blog post");
+        const fetchedPost = await fetchSingleBlog(documentId);
+        setPost(fetchedPost);
+        setError(null);
+      } catch (err) {
+        setError((err as Error).message);
       } finally {
         setLoading(false);
       }
@@ -50,17 +45,9 @@ const BlogPostPage: React.FC = () => {
     fetchData();
   }, [documentId]);
 
-  if (loading) {
-    return <div className="text-center mt-8">Loading...</div>;
-  }
-
-  if (error) {
-    return <div className="text-center mt-8 text-red-500">{error}</div>;
-  }
-
-  if (!post) {
-    return <div className="text-center mt-8">Blog post not found</div>;
-  }
+  if (loading) return <div className="text-center mt-8">Loading...</div>;
+  if (error) return <div className="text-center mt-8 text-red-500">{error}</div>;
+  if (!post) return <div className="text-center mt-8">Blog post not found</div>;
 
   return (
     <div className="container mx-auto px-4 py-8 mt-20">

@@ -14,5 +14,4 @@ export interface BlogPost {
   alternativeText: string | null;
   caption: string | null;
   url: string;
-  // Any other fields that the picture might have
 }

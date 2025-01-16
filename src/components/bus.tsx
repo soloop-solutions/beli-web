@@ -8,12 +8,12 @@ const BusSection: React.FC = () => {
 
 
   const images = [
-    { src: "/beli-hero.png", alt: "Bus 1" },
-    { src: "/hero.png", alt: "Bus 2" },
-    { src: "/beli-hero.png", alt: "Bus 3" },
-    { src: "/hero.png", alt: "Bus 4" },
-    { src: "/hero.png", alt: "Bus 5" },
-    { src: "/beli-hero.png", alt: "Bus 6" },
+    { src: "/bus1.jpg", alt: "Bus 1" },
+    { src: "/bus2.jpg", alt: "Bus 2" },
+    { src: "/bus3.jpg", alt: "Bus 3" },
+    { src: "/bus4.jpg", alt: "Bus 4" },
+    { src: "/bus5.jpg", alt: "Bus 5" },
+    { src: "/bus6.jpg", alt: "Bus 6" },
   ];
 
   return (
