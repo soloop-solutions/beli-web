@@ -12,15 +12,14 @@ const PlaneSection: React.FC = () => {
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-left text-white space-y-4 order-2 lg:order-2 lg:pl-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-              Linje e rregullt e autobusit
+            Fluturime ne te gjithe boten!
             </h1>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-              Beli Travel ju mundeson linjen e rregullt te autobusit
-              Prishtine-Zurich-Prishtine, nisjet behen 3 here ne jave.
+            Ofrojmë bileta avioni për destinacione në mbarë botën, duke filluar nga vendet si Gjermania, Zvicra, Austria, Suedia dhe Finlanda, deri te destinacione si Kina dhe SHBA. 
+            Udhëtoni me ne për çmime të shkëlqyera dhe fleksibilitet të lartë!
             </p>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-              Showcase travel tours and travel packages to your visitors with
-              SetSail's striking tour lists and single templates!
+
             </p>
             <span className="text-sm sm:text-base md:text-lg leading-relaxed">
             <a

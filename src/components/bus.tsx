@@ -9,11 +9,11 @@ const BusSection: React.FC = () => {
 
   const images = [
     { src: "/bus1.jpg", alt: "Bus 1" },
-    { src: "/bus2.jpg", alt: "Bus 2" },
-    { src: "/bus3.jpg", alt: "Bus 3" },
-    { src: "/bus4.jpg", alt: "Bus 4" },
-    { src: "/bus5.jpg", alt: "Bus 5" },
-    { src: "/bus6.jpg", alt: "Bus 6" },
+    { src: "/bus3.jpg", alt: "Bus 2" },
+    { src: "/bus2.jpg", alt: "Bus 3" },
+    { src: "/bus7.jpg", alt: "Bus 4" },
+    { src: "/bus6.jpg", alt: "Bus 5" },
+    { src: "/bus5.jpg", alt: "Bus 6" },
   ];
 
   return (
@@ -24,15 +24,14 @@ const BusSection: React.FC = () => {
           {/* Text Content */}
           <div className="w-full lg:w-1/2 text-left text-white space-y-4 order-2 lg:order-1 lg:p-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-              Linje e rregullt e autobusit
+            Linjë e rregullt me autobus për në Zvicër
             </h1>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-              Beli Travel ju mundeson linjen e rregullt te autobusit
-              Prishtine-Zurich-Prishtine, nisjet behen 3 here ne jave.
+            Që nga viti 2008, ofrojmë shërbim të rregullt gjatë gjithë vitit në linjën Kosovë-Zvicër-Kosovë.
+            Destinacionet tona përfshijnë qytete si Zurich, Basel, Laussane dhe Geneve, duke siguruar udhëtime të rehatshme dhe të besueshme.
             </p>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-              Showcase travel tours and travel packages to your visitors with
-              SetSail's striking tour lists and single templates!
+
             </p>
             <span className="text-sm sm:text-base md:text-lg leading-relaxed">
             <a

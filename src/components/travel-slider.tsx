@@ -93,12 +93,12 @@ export function TravelSlider() {
   if (error) return <ErrorState message={error} />;
 
   return (
-    <Carousel className="w-full max-w-5xl mx-auto pb-10">
+    <Carousel className="w-[80%] max-w-5xl mx-auto pb-10">
       <CarouselContent>
         {packages.map((pkg) => (
           <CarouselItem
             key={pkg.id}
-            className="basis-[90%] md:basis-1/2 lg:basis-1/3 mx-auto sm:mx-0"
+            className="basis-[70%] md:basis-1/2 sm:basis-[70%] lg:basis-1/3 mx-auto sm:mx-0"
           >
             <div className="p-1">
               <PackageCard package={pkg} />

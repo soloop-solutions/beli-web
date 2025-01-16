@@ -28,8 +28,7 @@ const TravelSection: React.FC = () => {
 
       {/* Description */}
       <p className="text-gray-600 text-sm sm:text-base max-w-2xl">
-        BELI Travel, ju ofron udhëtime te bukura, me shetitje sipas programit.
-        Half board, All Inclusive si dhe shëtitje me autobus sipas programit.
+      Udhëtimi juaj i ëndrrave është më pranë se kurrë! Shikoni ofertat tona speciale dhe filloni aventurën që gjithmonë keni dëshiruar.
       </p>
     </div>
   );

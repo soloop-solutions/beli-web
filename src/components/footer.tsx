@@ -4,7 +4,6 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 const Footer: React.FC = () => {
   const today = new Date();
   const year = today.getFullYear();
-  const experience = year - 1992;
 
   return (
     <footer className="bg-primary-blue text-white sm:py-6 pt-10">
@@ -16,8 +15,7 @@ const Footer: React.FC = () => {
             <h1 className="text-lg font-semibold text-white pb-2">Rreth BELI Travel</h1>
             <div className="space-y-4 text-gray-200 text-sm">
               <p className="text-left">
-                BELI Agjencia e Udhëtimeve ka {experience} vjet përvojë në industrinë e udhëtimeve, duke ofruar shërbime të jashtëzakonshme dhe përvoja të personalizuara udhëtimi.
-              </p>
+              Me një histori të pasur që nis në vitin 1992, BELI Travel ofron shërbime udhëtimi të besueshme dhe të favorshme për klientët tanë. Nga linjat e rregullta me autobus si linja e vazhdueshme Kosovë – Zvicër, dhe aranzhmane turistike të kombinuara, ofrojmë gjithashtu mundësi për bileta avioni në destinacione të ndryshme. Ne jemi të përkushtuar të ofrojmë shërbime të shkëlqyera për çdo udhëtim.              </p>
             </div>
           </div>
 

@@ -11,14 +11,14 @@ export const SingleBlogView: React.FC<SingleBlogViewProps> = ({ post }) => {
   console.log("Description received post:", post.Description);
 
   return (
-<article className="sm:basis-1/2 lg:basis-1/3 lg:px-20 sm:px-5">
+<article className="sm:basis-1/2 lg:basis-1/2 lg:px-40 sm:px-5">
   <div className="relative bg-white rounded-lg shadow-md overflow-hidden my-5">
     {post.Picture && (
       <div className="relative h-[50%] overflow-hidden">
       <img
         src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
         alt={post.Picture.alternativeText || "Blog Image"}
-        className="w-full h-[30rem]  object-fill"
+        className="w-full h-[30rem]  lg:object-fill object-cover"
       />
       </div>
     )}
