@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <header className="w-full fixed top-0 left-0 z-50 ">
       {/* Blue Gradient Bar */}
-      <div className="bg-custom-gradient w-full py-4">
+      <div className="bg-custom-gradient w-full py-4 ">
         <div className="container mx-auto px-4 flex justify-between items-center text-white text-sm">
           <div className="flex items-center gap-6 md:hidden">         
             {/* Placeholder for mobile layout balance */}
