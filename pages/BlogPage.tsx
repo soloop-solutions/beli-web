@@ -46,8 +46,8 @@ export function BlogPage() {
   }
 
   return (
-    <div className="container w-full mx-auto px-4">
-      <div className="flex flex-row items-center text-center px-5 mt-12">
+    <div className="container w-full mx-auto px-4 ">
+      <div className="flex flex-row items-center text-center px-5 mt-32">
         {/* Title */}
         <h2 className="text-2xl font-semibold text-primary-blue hover:text-primary-blue mb-4 mt-12">
           Guidat e fundit
