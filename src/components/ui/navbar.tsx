@@ -20,7 +20,7 @@ const Navbar = () => {
   ]
 
   return (
-    <header className="w-full fixed top-0 left-0 z-50">
+    <header className="w-full fixed top-0 left-0 z-50 ">
       {/* Blue Gradient Bar */}
       <div className="bg-custom-gradient w-full py-4">
         <div className="container mx-auto px-4 flex justify-between items-center text-white text-sm">
@@ -29,7 +29,7 @@ const Navbar = () => {
           </div>
           <div className="flex gap-4 items-center justify-center pl-5 md:justify-end w-full md:w-auto">
             {socialIcons.map(({ href, icon: Icon, label }) => (
-              <a key={label} href={href} className="text-white hover:text-pink-600">
+              <a key={label} href={href} className="text-white hover:text-pink-600 z-50">
                 <Icon className="h-5 w-5" aria-label={label} />
               </a>
             ))}

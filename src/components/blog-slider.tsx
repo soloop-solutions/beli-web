@@ -71,7 +71,7 @@ export default function BlogSlider() {
     return <div className="text-center mt-8 text-red-500">{error}</div>;
   }
   return (
-    <section className="w-full py-4 px-4 sm:px-6 lg:px-8">
+    <section className="w-screen py-4 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-full lg:max-w-6xl relative">
         <Carousel
           opts={{

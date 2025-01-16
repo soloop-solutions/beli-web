@@ -93,7 +93,7 @@ export function TravelSlider() {
   if (error) return <ErrorState message={error} />;
 
   return (
-    <Carousel className="w-[80%] max-w-5xl mx-auto pb-10">
+    <Carousel className="w-screen max-w-5xl mx-auto pb-10">
       <CarouselContent>
         {packages.map((pkg) => (
           <CarouselItem
