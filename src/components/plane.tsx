@@ -2,10 +2,10 @@ import React from "react";
 import { Button } from "./ui/button";
 
 const PlaneSection: React.FC = () => {
-  const phoneNumber = "37745501869"; // Replace with the actual phone number
-  const message = `Pershendetje, dua me shume informata rreth ofertes per bilete aeroplani`;
+  const phoneNumber = "38344113710"; 
+  const message = `Përshëndetje, dua më shume informata rreth ofertave për biletë aeroplani.`;
   return (
-    <div className="bg-[#1C79B8] relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12" id="plane">
+    <div className="bg-[#1C79B8] relative w-full  px-4 py-8 sm:px-6 sm:py-6" id="plane">
       <div className="container mx-auto max-w-4xl h-full flex flex-col justify-between relative">
         {/* Main Content */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center px-5">
@@ -21,7 +21,7 @@ const PlaneSection: React.FC = () => {
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
 
             </p>
-            <span className="text-sm sm:text-base md:text-lg leading-relaxed">
+            <span className="text-sm sm:text-base md:text-lg leading-relaxed items-end">
             <a
           href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
           target="_blank"

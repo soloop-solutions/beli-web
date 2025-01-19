@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 
 const BusSection: React.FC = () => {
 
-  const phoneNumber = "37745501869"; // Replace with the actual phone number
-  const message = `Pershendetje, dua me shume informata rreth ofertes per linjen e autobusit`;
+  const phoneNumber = "38344113710"; 
+  const message = `Përshëndetje, dua më shume informata rreth ofertave për biletë autobusi!`;
 
 
   const images = [
@@ -17,12 +17,12 @@ const BusSection: React.FC = () => {
   ];
 
   return (
-    <div className="bg-primary-blue relative w-full min-h-[70vh] px-4 py-8 sm:px-6 sm:py-12" id="bus">
+    <div className="bg-primary-blue relative w-full  px-4 py-8 sm:px-6 sm:py-12" id="bus">
       <div className="container mx-auto max-w-4xl h-full flex flex-col justify-between relative">
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           {/* Text Content */}
-          <div className="w-full lg:w-1/2 text-left text-white space-y-4 order-2 lg:order-1 lg:p-5">
+          <div className="w-full lg:w-1/2 text-left text-white space-y-4 order-2 px-5 lg:order-1 lg:p-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
             Linjë e rregullt me autobus për në Zvicër
             </h1>
@@ -47,9 +47,9 @@ const BusSection: React.FC = () => {
           </div>
 
           {/* Gallery Preview */}
-          <div className="w-full lg:w-1/2 order-2 lg:order-1">
+          <div className="w-full lg:w-1/2 order-2 lg:order-1 px-5">
             <div className="bg-white rounded-lg p-2">
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 ">
                 {images.map((item, index) => (
                   <div
                     key={index}

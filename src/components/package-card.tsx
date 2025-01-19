@@ -15,8 +15,10 @@ interface PackageCardProps {
 }
 
 export function PackageCard({ package: pkg }: PackageCardProps) {
-  const phoneNumber = "37745501869"; // Replace with the actual phone number
-  const message = `Pershendetje, dua me shume informata rreth ofertes per ${pkg.title}`;
+
+  const phoneNumber = "38344113710"; // Replace with the actual phone number
+  const message = `Përshendetje, dua më shumë informata rreth ofertes "${pkg.title}"!`;
+
   return (
     <Card className="group relative overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out h-full">
       <CardHeader className="p-0">
