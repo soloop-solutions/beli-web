@@ -12,7 +12,7 @@ const PlaneSection: React.FC = () => {
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-left text-white space-y-4 order-2 lg:order-2 lg:pl-5">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-            Fluturime ne te gjithe boten!
+            Fluturime në të gjithë botën!
             </h1>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
             Ofrojmë bileta avioni për destinacione në mbarë botën, duke filluar nga vendet si Gjermania, Zvicra, Austria, Suedia dhe Finlanda, deri te destinacione si Kina dhe SHBA. 

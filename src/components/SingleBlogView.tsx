@@ -12,7 +12,7 @@ export const SingleBlogView: React.FC<SingleBlogViewProps> = ({ post }) => {
 
   return (
 <article className="sm:basis-1/2 lg:basis-1/2 lg:px-40 sm:px-5">
-  <div className="relative bg-white rounded-lg shadow-md overflow-hidden my-5">
+  <div className="relative bg-white rounded-lg shadow-md overflow-hidden my-5 pt-10">
     {post.Picture && (
       <div className="relative h-[50%] overflow-hidden">
       <img
