@@ -80,7 +80,7 @@ export default function BlogSlider() {
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 3000,
             }),
           ]}
           className="w-full"

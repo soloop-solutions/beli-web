@@ -7,6 +7,13 @@ interface BlogListProps {
 
 export function BlogList({ posts }: BlogListProps) {
   return (
+<div className='flex flex-col items-start justify-center'>
+<div className="flex flex-row items-center text-center px-5 mt-32">
+        {/* Title */}
+        <h2 className="text-2xl font-semibold text-primary-blue hover:text-primary-blue mb-4 mt-12">
+          Guidat e fundit
+        </h2>
+      </div>    
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-11 px-5 mb-12 ">
       {posts.map((post) => (
         <div
@@ -49,6 +56,7 @@ export function BlogList({ posts }: BlogListProps) {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }
