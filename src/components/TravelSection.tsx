@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FormattedMessage} from "react-intl"
 const TravelSection: React.FC = () => {
   return (
     <div className="flex flex-col items-center text-center py-8 px-4" id="offers">
@@ -23,12 +23,12 @@ const TravelSection: React.FC = () => {
 
       {/* Title */}
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-        Ofertat
+      <FormattedMessage id="travelSection.title" />
       </h2>
 
       {/* Description */}
       <p className="text-gray-600 text-sm sm:text-base max-w-2xl">
-      Udhëtimi juaj i ëndrrave është më pranë se kurrë! Shikoni ofertat tona speciale dhe filloni aventurën që gjithmonë keni dëshiruar.
+      <FormattedMessage id="travelSection.description" />
       </p>
     </div>
   );

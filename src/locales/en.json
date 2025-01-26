@@ -1,0 +1,33 @@
+{
+     "footer.aboutTitle": "About BELI Travel",
+    "footer.aboutDescription": "With a rich history starting in 1992, BELI Travel offers reliable and convenient travel services. From regular bus lines such as the continuous Kosovo – Switzerland route to combined tourist packages, we also provide flight tickets to various destinations. We are dedicated to delivering excellent services for every journey.",
+    "footer.contactTitle": "Contact",
+    "footer.address": "Rr. Robert Doll, nr. 40, Prishtinë",
+    "footer.phone": "+38338610699, +38344113710",
+    "footer.email": "travelagencybeli@hotmail.com",
+    "footer.locationTitle": "Location",
+    "footer.mapTitle": "Google Map",
+    "footer.copyright": "© {year} Beli Travel. All Rights Reserved.",
+    "busSection.title": "Regular Bus Line to Switzerland",
+    "busSection.description": "Since 2008, we have been offering regular service year-round on the Kosovo-Switzerland-Kosovo route. Our destinations include cities such as Zurich, Basel, Lausanne, and Geneva, ensuring comfortable and reliable travel.",
+    "busSection.bookNow": "Book now",
+    "busSection.whatsappMessage": "Hello, I want more information about bus ticket offers!",
+    "heroSection.title": "BELI Travel, your best partner!",
+    "heroSection.description": "With us, your journey is in safe hands - special care for clients, reliability, and services you can trust only with BELI Travel!",
+    "planeSection.title": "Flights Around the World!",
+    "planeSection.description": "We offer plane tickets to destinations worldwide, starting from countries like Germany, Switzerland, Austria, Sweden, and Finland, to destinations like China and the USA. Travel with us for great prices and high flexibility!",
+    "planeSection.bookNow": "Book now",
+    "planeSection.whatsappMessage": "Hello, I want more information about airline ticket offers.",
+    "planeSection.imageAlt": "Plane",
+    "navbar.home": "Home",
+    "navbar.offers": "Offers",
+    "navbar.busTickets": "Bus Tickets",
+    "navbar.planeTickets": "Plane Tickets",
+    "navbar.guide": "Guide",
+    "blogSection.title": "Blog",
+  "blogSection.description": "BELI Travel provides travelers with detailed articles and tips to help them plan their ideal vacations. With practical guides and unique recommendations, every trip becomes easy and unforgettable!",
+  "travelSection.title": "Offers",
+  "travelSection.description": "Your dream trip is closer than ever! Check out our special offers and start the adventure you've always wanted."
+
+  }
+  

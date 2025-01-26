@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FormattedMessage} from "react-intl"
 
 const TravelSection: React.FC = () => {
   return (
@@ -24,13 +24,12 @@ const TravelSection: React.FC = () => {
 
       {/* Title */}
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-        Blog
-      </h2>
+        <FormattedMessage id="blogSection.title" />      </h2>
 
       {/* Description */}
       <p className="text-gray-600 text-sm sm:text-base max-w-2xl">
-      BELI Travel i mundëson udhëtarëve shkrime dhe këshilla të detajuara për t’i ndihmuar në planifikimin e pushimeve të tyre ideale.
-       Me udhëzues praktikë dhe rekomandime unike, çdo udhëtim bëhet i thjeshtë dhe i paharrueshëm!
+      <FormattedMessage id="blogSection.description" />
+
       </p>
     </div>
   );
