@@ -21,7 +21,7 @@ const messages: Record<string, Record<string, string>> = {
 };
 
 const App: React.FC = () => {
-  const [locale, setLocale] = useState<string>("en");
+  const [locale, setLocale] = useState<string>("sq");
 
 
 

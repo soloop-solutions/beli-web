@@ -5,7 +5,7 @@ import { Check, ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command"
+import { Command, CommandEmpty, CommandGroup, CommandItem, CommandList } from "@/components/ui/command"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { useIntl } from "react-intl"
 
@@ -24,10 +24,10 @@ export function LanguageSelector({ locale, setLocale }: { locale: string; setLoc
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          variant="outline"
+          variant="ghost"
           role="combobox"
           aria-expanded={open}
-          className="w-[140px] justify-between text-primary-blue bg-white hover:bg-gray-100"
+          className="w-[120px] justify-left text-white bg-transparent  hover:bg-transparent  hover:text-secondary-purple"
         >
           {locale ? languages.find((language) => language.value === locale)?.label : "Select language"}
           <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -35,9 +35,9 @@ export function LanguageSelector({ locale, setLocale }: { locale: string; setLoc
       </PopoverTrigger>
       <PopoverContent className="w-[140px] p-0">
         <Command>
-          <CommandInput
+          {/* <CommandInput
             placeholder={intl.formatMessage({ id: "navbar.searchLanguage", defaultMessage: "Search language..." })}
-          />
+          /> */}
           <CommandList>
             <CommandEmpty>
               {intl.formatMessage({ id: "navbar.noLanguageFound", defaultMessage: "No language found." })}

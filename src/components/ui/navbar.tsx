@@ -32,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
   return (
     <header className="w-full fixed top-0 left-0 z-50">
       {/* Blue Gradient Bar */}
-      <div className="bg-custom-gradient w-full py-4">
+      <div className="bg-custom-gradient w-full pb-4 pt-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-white text-sm">
           <div className="flex items-center gap-6 md:hidden"></div>
           <div className="flex gap-4 items-center justify-center pl-5 md:justify-end w-full md:w-auto">
@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
           </div>
 
           {/* Language Selector */}
-          <div className="flex gap-4 items-center justify-center pl-5 md:justify-end w-full md:w-auto z-50">
+          <div className="flex gap-4 items-center justify-center bg-red pl-5 md:justify-end w-full md:w-auto z-50">
             <LanguageSelector locale={locale} setLocale={setLocale} />
           </div>
         </div>
