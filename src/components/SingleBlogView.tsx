@@ -23,10 +23,10 @@ export const SingleBlogView: React.FC<SingleBlogViewProps> = ({ post }) => {
       </div>
     )}
     <div className="p-3 sm:p-4 text-left">
-      <h1 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 h-[2.5rem] sm:h-[3rem] lg:h-[3.5rem]">
+      <h1 className="text-xl  font-semibold mb-2 text-primary-blue line-clamp-2 h-[2.5rem] sm:h-[3rem] lg:h-[3.5rem]">
         {post.Title}
       </h1>
-      <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
+      <p className="flex justify-content-start text-base  text-gray-400 mb-2">
         {(() => {
           const date = new Date(post.createdAt);
           const year = date.getFullYear();
@@ -35,7 +35,7 @@ export const SingleBlogView: React.FC<SingleBlogViewProps> = ({ post }) => {
           return `${day}/${month}/${year}`;
         })()}
       </p>
-      <div className="text-xs sm:text-sm lg:text-base text-gray-500 mb-4 space-y-3">
+      <div className="text-lg  text-gray-500 mb-4 space-y-3">
   {post.Description.split("\n").map((paragraph, index) => (
     <p key={index} className="leading-relaxed">
       {paragraph}

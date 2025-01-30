@@ -94,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.home" defaultMessage="Home" />
                   </a>
                 </li>
-                <li  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                <li>
                   <a
                     href="/#offers"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"
@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.offers" defaultMessage="Offers" />
                   </a>
                 </li>
-                <li  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                <li >
                   <a
                     href="/#bus"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"

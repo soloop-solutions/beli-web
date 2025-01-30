@@ -71,68 +71,68 @@ export default function BlogSlider() {
     return <div className="text-center mt-8 text-red-500">{error}</div>;
   }
   return (
-    <section className="w-[95vw] py-4 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-full lg:max-w-6xl relative">
-        <Carousel
-          opts={{
-            loop: true,
-            align: "start",
-          }}
-          plugins={[
-            Autoplay({
-              delay: 3000,
-            }),
-          ]}
-          className="w-full"
-        >
-          <CarouselContent>
-            {posts.map((post) => (
-              <CarouselItem
-                key={post.id}
-                className="sm:basis-1/2 lg:basis-1/3 pl-4"
-              >
-                <div className="relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform my-5">
-                  <div className="relative w-full aspect-video overflow-hidden transform translate-y-0 transition-transform duration-300 ease-in-out">
-                    <img
-                      src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
-                      alt={post.Picture.name}
-                      className="w-full h-full object-cover transition-all duration-300"
-                    />
-                  </div>
-                  <div className="p-3 sm:p-4 text-left">
-                    <h2 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 h-[2.5rem] sm:h-[3rem] lg:h-[3.5rem]">
-                      {post.Title}
-                    </h2>
-                    <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
-                      {(() => {
-                        const date = new Date(post.createdAt);
-                        const year = date.getFullYear();
-                        const month = String(date.getMonth() + 1).padStart(2, '0');
-                        const day = String(date.getDate()).padStart(2, '0');
-                        return `${day}/${month}/${year}`;
-                      })()}
-                    </p>
-                    <p className="text-xs sm:text-sm lg:text-base text-gray-500 mb-4 line-clamp-2">
-                      {post.Description}
-                    </p>
-                    <a
-                      href={`/blog/${post.documentId}`}
-                      className="flex justify-end text-secondary-purple hover:text-primary-blue text-xs sm:text-sm lg:text-base"
-                    >
-                      Me shume
-                    </a>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="hidden sm:block">
-            <CarouselPrevious className="absolute left-[-40px] top-1/2 -translate-y-1/2 fill-black" />
-            <CarouselNext className="absolute right-[-40px] top-1/2 -translate-y-1/2 fill-black" />
-          </div>
-        </Carousel>
+<section className="py-4 px-4 sm:px-6 lg:px-8">
+  <div className="mx-auto w-full max-w-6xl relative">
+    <Carousel
+      opts={{
+        loop: true,
+        align: "start",
+      }}
+      plugins={[
+        Autoplay({
+          delay: 3000,
+        }),
+      ]}
+      className="w-full"
+    >
+      <CarouselContent>
+        {posts.map((post) => (
+          <CarouselItem
+            key={post.id}
+            className="sm:basis-1/2 lg:basis-1/3 pl-4"
+          >
+            <div className="relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:border-2 hover:border-[#E5502A] transition-all duration-300 ease-in-out transform my-5">
+              <div className="relative w-full aspect-video overflow-hidden transform translate-y-0 transition-transform duration-300 ease-in-out">
+                <img
+                  src={`https://dolphin-app-muwul.ondigitalocean.app${post.Picture.url}`}
+                  alt={post.Picture.name}
+                  className="w-full h-full object-cover transition-all duration-300"
+                />
+              </div>
+              <div className="p-3 sm:p-4 text-left">
+                <h2 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 text-primary-blue line-clamp-2 h-[2.5rem] sm:h-[3rem] lg:h-[3.5rem]">
+                  {post.Title}
+                </h2>
+                <p className="flex justify-content-start text-xs sm:text-sm text-gray-300 mb-2">
+                  {(() => {
+                    const date = new Date(post.createdAt);
+                    const year = date.getFullYear();
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const day = String(date.getDate()).padStart(2, '0');
+                    return `${day}/${month}/${year}`;
+                  })()}
+                </p>
+                <p className="text-xs sm:text-sm lg:text-base text-gray-500 mb-4 line-clamp-2">
+                  {post.Description}
+                </p>
+                <a
+                  href={`/blog/${post.documentId}`}
+                  className="flex justify-end text-secondary-purple hover:text-primary-blue text-xs sm:text-sm lg:text-base"
+                >
+                  Me shume
+                </a>
+              </div>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <div className="hidden sm:block">
+        <CarouselPrevious className="absolute left-[-40px] top-1/2 -translate-y-1/2 fill-black" />
+        <CarouselNext className="absolute right-[-40px] top-1/2 -translate-y-1/2 fill-black" />
       </div>
-    </section>
-  );
+    </Carousel>
+  </div>
+</section>
+  )
 }
 
