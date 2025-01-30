@@ -237,7 +237,7 @@ const CarouselNext = React.forwardRef<
         orientation === "horizontal"
           ? "-right-12 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-        "hidden sm:flex", // Ensure it's hidden on mobile and flex on larger screens
+        "hidden md:flex", // Ensure it's hidden on mobile and flex on larger screens
         className // Keep custom classes intact
       )}
       disabled={!canScrollNext}

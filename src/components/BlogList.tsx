@@ -6,7 +6,7 @@ interface BlogListProps {
 
 export function BlogList({ posts }: BlogListProps) {
   return (
-    <div className="flex flex-col items-start justify-center">
+    <div className="flex flex-col items-start justify-center margin-top:20%">
       {/* Title */}
       <div className="flex flex-row items-center text-center px-4 mt-12 sm:mt-32">
         <h2 className="text-xl sm:text-2xl font-semibold text-primary-blue hover:text-primary-blue mb-4">

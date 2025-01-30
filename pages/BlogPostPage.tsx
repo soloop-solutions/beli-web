@@ -50,7 +50,7 @@ const BlogPostPage: React.FC = () => {
   if (!post) return <div className="text-center mt-8">Blog post not found</div>;
 
   return (
-    <div className="container mx-auto px-4 py-8 mt-20">
+    <div className="container mx-auto px-4 py-8 mt-20 padding-top:20%">
       <SingleBlogView post={post} />
     </div>
   );

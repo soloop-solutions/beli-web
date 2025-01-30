@@ -20,21 +20,23 @@ const PlaneSection: React.FC = () => {
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
               <FormattedMessage id="planeSection.description" />
             </p>
-            <span className="text-sm sm:text-base md:text-lg leading-relaxed items-end">
-              <a
-                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button
-                  variant="default"
-                  size="sm"
-                  className="rounded-full mt-5 bg-white text-primary-blue hover:bg-primary-blue hover:text-white"
+            <div className="items-end justify-center mt-5 text-right sm:text-left">
+              <span className="text-sm sm:text-base md:text-lg leading-relaxed ml-auto sm:ml-0">
+                <a
+                  href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <FormattedMessage id="planeSection.bookNow" />
-                </Button>
-              </a>
-            </span>
+                  <Button
+                    variant="default"
+                    size="sm"
+                    className="rounded-full mt-5 bg-white text-primary-blue hover:bg-primary-blue hover:text-white"
+                  >
+                    <FormattedMessage id="planeSection.bookNow" />
+                  </Button>
+                </a>
+              </span>
+            </div>
           </div>
 
           {/* Gallery Preview */}

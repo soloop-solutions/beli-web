@@ -29,17 +29,19 @@ const BusSection: React.FC = () => {
             <p className="text-sm sm:text-base md:text-lg leading-relaxed">
               <FormattedMessage id="busSection.description" />
             </p>
-            <span className="text-sm sm:text-base md:text-lg leading-relaxed">
-              <a
-                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button variant="default" size="sm" className="rounded-full mt-5 bg-white text-primary-blue hover:bg-secondary-blue hover:text-white">
-                  <FormattedMessage id="busSection.bookNow" />
-                </Button>
-              </a>
-            </span>
+            <div className="items-end justify-center mt-5 text-right sm:text-left">
+              <div className="text-sm sm:text-base md:text-lg leading-relaxed ml-auto sm:ml-0">
+                <a
+                  href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Button variant="default" size="sm" className="rounded-full mt-5 bg-white text-primary-blue hover:bg-secondary-blue hover:text-white">
+                    <FormattedMessage id="busSection.bookNow" />
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Gallery Preview */}

@@ -34,7 +34,6 @@ interface TravelImage {
   // Any other fields that the picture might have
 }
 
-
 const LoadingState = () => (
   <Card className="w-full">
     <CardContent className="flex items-center justify-center h-[300px]">
@@ -69,7 +68,6 @@ export function TravelSlider() {
       );
       console.log(response);
 
-
       // Assuming data is in response.data.data
       setPackages(response.data.data);
       setLoading(false);
@@ -93,7 +91,7 @@ export function TravelSlider() {
   if (error) return <ErrorState message={error} />;
 
   return (
-    <Carousel className="w-screen max-w-5xl mx-auto pb-10">
+    <Carousel className="w-screen max-w-5xl mx-auto pb-10 pl-5 sm:pl-0">
       <CarouselContent>
         {packages.map((pkg) => (
           <CarouselItem

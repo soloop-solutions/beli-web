@@ -10,7 +10,7 @@ import BlogSlider from "@/components/blog-slider";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="padding-top:20%">
       {/* Hero Section 
       <div className="h-screen w-full absoulte">
       <img

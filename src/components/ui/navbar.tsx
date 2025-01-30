@@ -13,6 +13,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+
   // const intl = useIntl()
 
   useEffect(() => {
@@ -28,6 +29,8 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
     { href: "https://www.instagram.com/belitravel/", icon: Instagram, label: "Instagram" },
     { href: "tel:+38344113710", icon: Phone, label: "Phone" },
   ]
+
+  
 
   return (
     <header className="w-full fixed top-0 left-0 z-50">
@@ -91,7 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.home" defaultMessage="Home" />
                   </a>
                 </li>
-                <li>
+                <li  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                   <a
                     href="/#offers"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"
@@ -99,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.offers" defaultMessage="Offers" />
                   </a>
                 </li>
-                <li>
+                <li  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                   <a
                     href="/#bus"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"

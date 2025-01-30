@@ -46,7 +46,7 @@ export function BlogPage() {
   }
 
   return (
-    <div className="container w-full mx-auto px-4 ">
+    <div className="container w-full mx-auto px-4 padding-top:20%">
       <BlogList posts={posts} />
     </div>
   );
