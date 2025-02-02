@@ -10,10 +10,10 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-			'primary-blue': '#153049',
-			'secondary-blue': '#157fc9',
-			'primary-purple': '#9b005e',
-			'secondary-purple': '#fd1e23',
+  			'primary-blue': '#153049',
+  			'secondary-blue': '#157fc9',
+  			'primary-purple': '#9b005e',
+  			'secondary-purple': '#fd1e23',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -55,12 +55,28 @@ module.exports = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-		  backgroundImage: {
-			'custom-gradient': 'linear-gradient(90deg, rgba(21,48,73,1) 0%, rgba(21,127,201,1) 25%)',
-		  },
-		  fontFamily: {
-			montserrat: ['Nunito', 'sans-serif'],
-		  },
+  		backgroundImage: {
+  			'custom-gradient': 'linear-gradient(90deg, rgba(21,48,73,1) 0%, rgba(21,127,201,1) 25%)'
+  		},
+  		fontFamily: {
+  			montserrat: [
+  				'Nunito',
+  				'sans-serif'
+  			]
+  		},
+  		keyframes: {
+  			'spinner-leaf-fade': {
+  				'0%, 100%': {
+  					opacity: '0'
+  				},
+  				'50%': {
+  					opacity: '1'
+  				}
+  			}
+  		},
+  		animation: {
+  			'spinner-leaf-fade': 'spinner-leaf-fade 800ms linear infinite'
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

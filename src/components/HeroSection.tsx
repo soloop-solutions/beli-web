@@ -1,7 +1,29 @@
 import { FormattedMessage} from "react-intl";
+// import { Loader } from "@shadcn/ui"
+import { useEffect, useState } from "react";
+// import  LoadingSpinner  from "loader.tsx";
+import { Spinner } from "./ui/spinner";
+
 
 export default function HeroSection() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false); 
+    }, 100);
+  }, []);
   
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-secondary-blue opacity-75">
+       <Spinner size="lg" className="bg-primary-purple" />
+       
+      </div>
+    );
+  }
+
     return (
       <div className="relative h-[70vh] w-full overflow-hidden mt-12">
         <img

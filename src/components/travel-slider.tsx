@@ -1,5 +1,5 @@
 'use client'
-
+import { Spinner } from "./ui/spinner";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import {
@@ -37,7 +37,7 @@ interface TravelImage {
 const LoadingState = () => (
   <Card className="w-full">
     <CardContent className="flex items-center justify-center h-[300px]">
-      Loading travel packages...
+    <Spinner size="lg" className="bg-white" />
     </CardContent>
   </Card>
 );

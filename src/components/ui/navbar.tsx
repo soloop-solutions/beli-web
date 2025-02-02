@@ -82,11 +82,11 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
             {/* Navigation Links */}
             <nav
               className={`${
-                mobileMenuOpen ? "absolute top-full left-0 right-0 bg-white shadow-lg" : "hidden"
+                mobileMenuOpen ? "absolute top-full left-0 right-0 bg-white shadow-lg sm:w-[50%] sm:right" : "hidden"
               } md:block`}
             >
               <ul className="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-sm font-medium">
-                <li>
+                <li  onClick={() => setMobileMenuOpen(mobileMenuOpen)}>
                   <a
                     href="/"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"
@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.offers" defaultMessage="Offers" />
                   </a>
                 </li>
-                <li >
+                <li>
                   <a
                     href="/#bus"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"

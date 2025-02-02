@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { BlogList } from '@/components/BlogList';
 import { BlogPost } from '@/types/BlogPost';
+
 import axios from 'axios';
+import { Spinner } from '@/components/ui/spinner';
 
 // Function to fetch blog posts with token
 const fetchBlogPosts = async () => {
@@ -38,7 +40,7 @@ export function BlogPage() {
   }, []);
 
   if (loading) {
-    return <div className="text-center mt-8">Loading...</div>;
+    return   <Spinner size="lg" className="bg-white" />;
   }
 
   if (error) {

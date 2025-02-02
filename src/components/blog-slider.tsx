@@ -1,5 +1,5 @@
 "use client";
-
+import { Spinner } from "./ui/spinner";
 import { useState, useEffect } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -10,6 +10,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import axios from "axios";
+
+
 
 interface Picture {
   id: number;
@@ -64,7 +66,7 @@ export default function BlogSlider() {
   }, []);
 
   if (loading) {
-    return <div className="text-center mt-8">Loading...</div>;
+    return  <Spinner size="lg" className="bg-white" />;
   }
 
   if (error) {
