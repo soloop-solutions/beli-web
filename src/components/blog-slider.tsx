@@ -73,7 +73,7 @@ export default function BlogSlider() {
     return <div className="text-center mt-8 text-red-500">{error}</div>;
   }
   return (
-<section className="w-screen max-w-5xl py-4 px-4 sm:px-6 lg:px-8">
+<section className="w-screen lg:w-[95vw] py-4 px-4 sm:px-6 lg:px-20 mx-auto">
   <div className="mx-auto w-full relative">
     <Carousel
       opts={{
@@ -128,7 +128,7 @@ export default function BlogSlider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="hidden sm:block">
+      <div className="hidden md:block ">
         <CarouselPrevious className="absolute left-[-40px] top-1/2 -translate-y-1/2 fill-black" />
         <CarouselNext className="absolute right-[-40px] top-1/2 -translate-y-1/2 fill-black" />
       </div>

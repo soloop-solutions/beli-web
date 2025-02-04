@@ -31,6 +31,23 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
   ]
 
   
+  const scrollToSection = (sectionId: string, offset: number = 100): void => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: sectionPosition - offset,
+        behavior: 'smooth',
+      });
+    } else {
+      console.warn(`Section with id ${sectionId} not found.`);
+    }
+  };
+  
+  
+  const handleScroll = (sectionId : string, offset:number =100):void => {
+    scrollToSection(sectionId, offset);
+  };
 
   return (
     <header className="w-full fixed top-0 left-0 z-50">
@@ -72,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
 
             {/* Hamburger Menu */}
             <button
-              className="text-primary-blue hover:text-secondary-blue md:hidden bg-white border-primary-purple hover:border-primary-purple"
+              className="text-primary-blue hover:text-secondary-blue lg:hidden bg-white border-primary-purple hover:border-primary-purple"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -82,8 +99,8 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
             {/* Navigation Links */}
             <nav
               className={`${
-                mobileMenuOpen ? "absolute top-full left-0 right-0 bg-white shadow-lg sm:w-[50%] sm:right" : "hidden"
-              } md:block`}
+                mobileMenuOpen ? "absolute top-full left-0 right-0 bg-white shadow-lg md:w-[50%] sm:right" : "hidden"
+              } lg:block`}
             >
               <ul className="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-sm font-medium">
                 <li  onClick={() => setMobileMenuOpen(mobileMenuOpen)}>
@@ -94,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.home" defaultMessage="Home" />
                   </a>
                 </li>
-                <li>
+                <li id="section1" onClick={() => mobileMenuOpen && setMobileMenuOpen(false) && handleScroll('section1', 100)}>
                   <a
                     href="/#offers"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"
@@ -102,7 +119,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.offers" defaultMessage="Offers" />
                   </a>
                 </li>
-                <li>
+                <li onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}>
                   <a
                     href="/#bus"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"
@@ -110,7 +127,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.busTickets" defaultMessage="Bus Tickets" />
                   </a>
                 </li>
-                <li>
+                <li onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}>
                   <a
                     href="/#plane"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"
@@ -118,7 +135,7 @@ const Navbar: React.FC<NavbarProps> = ({ locale, setLocale }) => {
                     <FormattedMessage id="navbar.planeTickets" defaultMessage="Plane Tickets" />
                   </a>
                 </li>
-                <li>
+                <li onClick={() => mobileMenuOpen && setMobileMenuOpen(false)}>
                   <a
                     href="/blog"
                     className="block py-2 px-3 md:px-2 hover:text-secondary-blue text-primary-blue font-medium transition-colors"

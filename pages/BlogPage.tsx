@@ -39,6 +39,7 @@ export function BlogPage() {
       });
   }, []);
 
+
   if (loading) {
     return   <Spinner size="lg" className="bg-white" />;
   }
