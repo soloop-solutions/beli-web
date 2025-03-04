@@ -46,10 +46,8 @@ const PlaneSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Image Container */}
           <div className="order-1 lg:order-1 w-full md:w-3/4 flex justify-center">
             <div className="relative w-full max-w-2xl rounded-lg shadow-lg overflow-hidden">
-              {/* 16:9 Aspect Ratio */}
               <img
                 src="/plane.png"
                 alt={intl.formatMessage({ id: "plane.imageAlt" })}
